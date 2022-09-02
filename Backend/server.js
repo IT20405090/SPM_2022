@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 //import Routes 
 const user = require("./Routes/userRoutes");
 
+//anodya routes
+const TimetableRoutes = require ('./Routes/TimetableRoutes');
+
 
 const app = express();
 
@@ -26,6 +29,9 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 app.use("/user",user);
+
+//anodya
+app.use(TimetableRoutes);
 
 
 
