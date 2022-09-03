@@ -14,17 +14,26 @@ import Dashboard from "./components/Dashboard";
 //admin
 import ViewAllRoles from "./components/admin/ViewAllRoles";
 import UpdateUser from "./components/admin/UpdateUser";
+import AdminCheckLeave from "./components/admin/AdminCheckLeave";
+import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
 
 
 //customer
 
 
 
-//staff
+//employee
 import RegisterStaff from "./components/auth/RegisterStaff";
 
+import EmpAttendaceMark from "./components/employee/EmpAttendaceMark";
+import EmpViewAllAttendance from "./components/employee/EmpViewAllAttendance";
+import EmpAttendanceUpdate from "./components/employee/EmpAttendanceUpdate";
+import EmpViewOneAttendance from "./components/employee/EmpViewOneAttendance";
 
-
+import EmpLeaveFormCreate from "./components/employee/EmpLeaveFormCreate";
+import EmpViewAllLeaves  from "./components/employee/EmpViewAllLeaves";
+import EmpLeaveEdit from "./components/employee/EmpLeaveEdit";
+import EmpLeaveViewOne from "./components/employee/EmpLeaveViewOne";
 
 
 
@@ -41,15 +50,30 @@ export default function Router() {
 						<Route exact path="/login" element={<Login/>} />
 						<Route exact path="/userprofile" element={<Profile/>} />
 
-						{/* staff */}
+						{/* employee */}
 
 						<Route exact path="/staffRegister" element={<RegisterStaff/>} />
+
+						<Route path="/EmpAttendaceMark" element={<EmpAttendaceMark/>}/>
+                    	<Route path="/EmpViewAllAttendance" element={<EmpViewAllAttendance/>}/>
+                    	<Route path="/EmpAttendanceUpdate/:id" element={<EmpAttendanceUpdate/>}/>
+                    	<Route path="/EmpViewOneAttendance/:id" element={<EmpViewOneAttendance/>}/>
+                  
+						<Route path="/EmpLeaveFormCreate" element={<EmpLeaveFormCreate/>}></Route>
+						<Route path="/EmpViewAllLeaves" element={<EmpViewAllLeaves/>}/>
+						<Route path="/EmpLeaveEdit/:id" element={<EmpLeaveEdit/>}/>
+						<Route path="/EmpLeaveViewOne/:id" element={<EmpLeaveViewOne/>}/>
+                    
+
+
 
 						{/* admin */}
 				
 						<Route exact path="/ViewAllRoles" element={<ViewAllRoles/>}/>
-					
 						<Route exact path="/updateUser/:id" element={<UpdateUser/>}/>
+						<Route path="/AdminCheckLeave/:id" element={<AdminCheckLeave/>}/>
+                    	<Route path="/AdminLeaveViewAll" element={<AdminLeaveViewAll/>}/>
+                   
 
 						{/* customer */}
 				
