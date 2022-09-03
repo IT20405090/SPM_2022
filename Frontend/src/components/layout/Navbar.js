@@ -46,17 +46,18 @@ const Navbar = () => {
                 <a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Staff Allocation</a>
 				<a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Salary Information</a>
 				<a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">UTime Tables</a>
-				<a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Other</a>
-				<a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/ViewAllRoles" aria-current="page">View Roles</a>
-				
+				<a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/AdminLeaveViewAll" aria-current="page">View Leaves</a>
+				<a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/ViewAllRoles" aria-current="page">View Roles</a>	
 			    <a style={{ display: userRole == "admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" aria-current="page" href="/staffRegister">Register Employee</a>
 
 
 
 				{/*Employee pages*/}
+				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpViewAllAttendance" aria-current="page">View Attendace</a>
 				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Salary Information</a>
-				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Working Shifts</a>
-				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Leave Application</a>
+				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpAttendaceMark" aria-current="page">Attendace Mark</a>
+				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpLeaveFormCreate" aria-current="page">Leave Application</a>
+				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpViewAllLeaves" aria-current="page">View All Leaves</a>
 				<a style={{ display: userRole == "employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Other</a>
 
 
