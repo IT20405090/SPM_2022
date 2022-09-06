@@ -118,7 +118,7 @@ const Profile = () => {
     <div style={{ marginTop: "70px", marginBottom: "70px" }}>
       <div>
         <center>
-        <Card className="" style={{ marginLeft: "30px", marginRight: "30px" }}>
+        <Card class="p-3 mb-2 bg-secondary text-white" style={{ marginLeft: "30px", marginRight: "30px" }}>
           <CardHeader>
             <CardTitle style={{ color: "purple", fontSize: "30px" }}>
               My Profile

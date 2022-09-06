@@ -399,7 +399,7 @@ const Viewallusers = () => {
     const handleSubmit= ()=>{
       localStorage.removeItem("token");
       localStorage.removeItem("userRole");
-      navigate("/ViewAllRoles");
+      navigate("/Login");
     }
 
 	const [customers , setcustomers] = useState([])
@@ -457,7 +457,7 @@ const Viewallusers = () => {
                
                 <div >
                     <center >
-                        <b style={{fontSize:"48px" , textDecoration:"underline"}}>System Users Details </b><br/><br/>
+                        <b style={{fontSize:"48px" , textDecoration:"underline"}}>User Details</b><br/><br/>
                     </center>
                   
                     <br/><br/>
@@ -470,7 +470,7 @@ const Viewallusers = () => {
                             <th>Email Address</th>
                             <th>Contact Number</th>
                             <th>User Type</th>
-                            <th>Delete user</th>
+
                           
                             </tr>
                         </thead>  
@@ -484,10 +484,6 @@ const Viewallusers = () => {
                                     <td>{customers?.userRole}</td>
 
 
-                                    <td>  <a className="btn btn-primary" style = {{textDecoration:'none',color:'white'}}  href="/"  >
-                               &nbsp;Delete
-                                </a></td>
-              
        
 
                                 </tr>
@@ -519,7 +515,7 @@ const Viewallusers = () => {
                                     <td>{employees?.userRole}</td>
 
 
-                                    <td>  <a className="btn btn-primary" style = {{textDecoration:'none',color:'white'}}  href="/"  >
+                                    <td>  <a className="btn btn-primary" style = {{textDecoration:'none',color:'white'}}  href="/ViewAllRoles"  >
                                &nbsp;Delete
                                 </a></td>
               

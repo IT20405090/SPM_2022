@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CreateAdmin } from "../../Services/AuthServices";
 import Swal from 'sweetalert2';
+import { ValidateSignUp } from "./Validation";
 import grp from '../../img/grp.webp';
 
 const RegisterStaff = () => {
