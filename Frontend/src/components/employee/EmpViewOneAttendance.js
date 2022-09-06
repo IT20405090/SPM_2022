@@ -69,7 +69,7 @@ function ViewOneAttendance() {
                 </div>
                     <br/>
                     
-                    <table className='table' style={{ width:'30%', height:'40%', marginLeft:'540px',marginTop:'100px',fontSize:'20px', 
+                    <table className='tableEmpAttOne' style={{ width:'30%', height:'40%', marginLeft:'540px',marginTop:'100px',fontSize:'20px', 
                     backgroundColor:'#d3d3d3', border:"1px solid black"}}>
                      <tr>
                       <th colspan="2"> <center>---Check The Details---</center> </th>
@@ -106,14 +106,14 @@ function ViewOneAttendance() {
                     <br/>
                        
                     </table>
-
+                    <br/>
                             <button className="btn btn-success" style={{marginLeft:'700px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
                             <a href="/EmpViewAllAttendance"
-                            style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
+                            style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
                             <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
-
+                            
                     </div>
-
+                    <br/>
 
     </div>
   )

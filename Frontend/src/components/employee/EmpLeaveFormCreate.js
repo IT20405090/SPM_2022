@@ -175,12 +175,13 @@ function LeaveFormCreate() {
                         required='true' />
                     </div>
 
-                  <table className='table' style={{border:"1px solid black"}} >
+                  <table className='tableLeave' style={{border:"1px solid black"}} >
                   <br/>
 
                     <tr>
                     <td>
                     <div className='form-group'>
+                    
                         <label>Employee Name :</label><br />
                         <input 
                         type='text' 
@@ -189,9 +190,13 @@ function LeaveFormCreate() {
                         style={{ marginBottom: '20px' }} 
                         onChange={(e) => handle_Emp_Name_Change(e)} 
                         required='true' />
+                        
                     </div>
+                    
                     </td>
+                   
                     <td>
+                   
                     <div className='form-group'>
                         <label>Employee ID: </label><br />
                         <input type='text'
@@ -269,7 +274,7 @@ function LeaveFormCreate() {
                     <tr>
                     <td colspan="2">
                     <div>
-                      <p>-------------------------------------------------------------------------------------------------------------------------------------------</p>
+                      <p>--------------------------------------------------------------------------------------------------</p>
                       <p style={{marginLeft:'750px'}}>*Manager Only</p>
                     </div>
                     </td>

@@ -171,7 +171,7 @@ useEffect(function effectFunction() {
          
               <form style={{width:'50%', marginLeft:'450px'}}>
                         <div className="form-group">
-                        <h4>Emp Name</h4>
+                        <h5>Employee Name: </h5>
                             <input type="text"
                             className="form-control"
                             name="Emp_Name"
@@ -180,9 +180,9 @@ useEffect(function effectFunction() {
                             required='true'
                             />
                         </div>
-
+                        <br/>
                         <div className="form-group">
-                        <h4>Emp ID</h4>
+                        <h5>Employee ID: </h5>
                             <input type="text"
                             className="form-control"
                             name="Emp_ID"
@@ -191,9 +191,9 @@ useEffect(function effectFunction() {
                             required='true'
                             />
                         </div>
-
+                        <br/>
                         <div className="form-group">
-                        <h4>Date</h4>
+                        <h5>Date: </h5>
                             <input type="date"
                             className="form-control"
                             name="Date"
@@ -202,9 +202,9 @@ useEffect(function effectFunction() {
                             required='true'
                             />
                         </div>
-
+                        <br/>
                         <div className='form-group'>
-                             <h4>Shift</h4>
+                             <h5>Shift: </h5>
                               <select
                               id="Shift" 
                               className="form-control"
@@ -219,9 +219,9 @@ useEffect(function effectFunction() {
                                           
                               </select>
                         </div>
-
+                        <br/>
                         <div className="form-group">
-                        <h4>Time_In</h4>
+                        <h5>Time In: </h5>
                             <input type="time"
                             className="form-control"
                             name="Time_In"
@@ -230,9 +230,9 @@ useEffect(function effectFunction() {
                             required='true'
                             />
                         </div>
-
+                        <br/>
                         <div className="form-group">
-                        <h4>Time_Out</h4>
+                        <h5>Time Out: </h5>
                             <input type="time"
                             className="form-control"
                             name="Time_Out"
@@ -241,7 +241,7 @@ useEffect(function effectFunction() {
                             required='true'
                             />
                         </div>
-
+                        <br/>
                         {/* <div className="form-group">
                         <h2>Total_Hours_per_Day</h2>
                             <input type="text"
@@ -265,7 +265,7 @@ useEffect(function effectFunction() {
                         </div> */}
                         
               </form>
-                   
+                  
               <button className="btn btn-success" type="submit" style={{marginTop:'15px', width:"200px", 
                       marginLeft:"600px",backgroundColor:"#484846"}} onClick={(e)=>ChangeOnClick(e)} >
                       <i class="fa-solid fa-pen-to-square"></i>

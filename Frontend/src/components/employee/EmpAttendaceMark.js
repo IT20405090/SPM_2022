@@ -184,9 +184,10 @@ const EmpAttendaceMark = () => {
                         style={{ marginBottom: '20px' }} 
                         onChange={(e) => handle_Emp_Name_Change(e)} 
                         required='true' />
+                        
                     </div>
                     </td>
-                      <td >
+                      <td>
                         <div className='form-group'>
                             <label>Employee ID :</label><br />
                               <input 
