@@ -161,10 +161,10 @@ useEffect(function effectFunction() {
        <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#d9d9d9", padding:'10px 20% 10px 20%' }}>
                   <form >
                       <div className='form-group'>
-                        <label style={{fontWeight:'700'}} >Today</label>: {Today}   
+                        <label style={{fontWeight:'700'}} >Submitted Date:</label> {Today}   
                       </div>
 
-                      <table className='table' style={{border:"1px solid black"}} >
+                      <table className='tableAdminLeave' style={{border:"1px solid black"}} >
                       <br/>
                         <tr>
                         <td>
@@ -185,6 +185,7 @@ useEffect(function effectFunction() {
                           </div>
                         </td>
                         </tr>
+                        <br/>
                         <tr>
                         <td colspan="2">
                           <div className='form-group'>
@@ -195,6 +196,7 @@ useEffect(function effectFunction() {
                           </div>
                         </td>
                         </tr>
+                        <br/>
                         <tr>
                         <td colspan="2">
                           <div className='form-group'>
@@ -207,6 +209,7 @@ useEffect(function effectFunction() {
                             </div>
                           </td>
                           </tr>
+                          <br/>
                           <tr>
                           <td>
                             <div className='form-group'>
@@ -219,7 +222,7 @@ useEffect(function effectFunction() {
                           </td>
                           <td>
                             <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Leave To:</label>:
+                                <label style={{fontWeight:'700'}}>Leave To:</label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {Leave_To} 
                               
@@ -231,7 +234,7 @@ useEffect(function effectFunction() {
                           <tr>
                           <td colspan="2">
                             <div>
-                              <p>-------------------------------------------------------------------------------------------------------------------------------------------</p>
+                              <p>----------------------------------------------------------------------------------------------------</p>
                               <p style={{marginLeft:'750px'}}>*Manager Only</p>
                             </div>
                           </td>
@@ -251,7 +254,7 @@ useEffect(function effectFunction() {
                                 <option value="Approved">Approved</option>
                                 <option value="Disapproved">Disapproved</option>
                               </select>
-                            
+                              <br/>
                         </div>
                       </td>
                       </tr>
@@ -267,6 +270,7 @@ useEffect(function effectFunction() {
                             value={Comments}
                             onChange={(e) => handle_Comments(e)}  
                             placeholder='Add A Comment Of Requirements Here...'></textarea>
+                            <br/>
                         </div>
                       </td>
                       </tr>

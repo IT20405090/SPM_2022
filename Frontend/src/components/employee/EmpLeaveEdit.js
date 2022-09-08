@@ -151,7 +151,7 @@ useEffect(function effectFunction() {
 
            <form>
               <div className="form-group">
-              <h2>Today</h2>
+              <h2>Submitted Date</h2>
                    <input type="date"
                    className="form-control"
                    name="Today"
@@ -162,7 +162,7 @@ useEffect(function effectFunction() {
                    />
               </div>
               <label style={{fontSize:'14px', color:'#d47400', marginLeft:'600px'}}>*Default Type/Pending Results Are "undifined" </label> 
-          <table className='table' style={{border:"1px solid black"}} >
+          <table className='tableLeaveEdit' style={{border:"1px solid black"}} >
             
           <br/>
 
@@ -262,7 +262,7 @@ useEffect(function effectFunction() {
                  <tr>
                  <td colspan="2">
                  <div>
-                  <p>-------------------------------------------------------------------------------------------------------------------------------------------</p>
+                  <p>-------------------------------------------------------------------------------------------------------</p>
                   <p style={{marginLeft:'750px'}}>*Manager Only</p>
                  </div>
                  </td>

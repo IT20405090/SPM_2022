@@ -87,10 +87,10 @@ useEffect(function effectFunction() {
                   <form >
 
                             <div className='form-group'>
-                              <label style={{fontWeight:'700'}} >Today</label>: {Today}   
+                              <label style={{fontWeight:'700'}} >Submitted Date:</label> {Today}   
                             </div>
 
-                        <table className='table' style={{border:"1px solid black"}} >
+                        <table className='tableLeaveOne' style={{border:"1px solid black"}} >
                           <br/>
 
                           <tr>
@@ -112,28 +112,31 @@ useEffect(function effectFunction() {
                             </div>
                           </td>
                           </tr>
+                          <br/>
                           <tr>
                           <td colspan="2">
                             <div className='form-group'>
                                 <label style={{fontWeight:'700'}}>Reason For The Leave: </label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {Leave_Reason} 
                                 
                             </div>
                           </td>
                           </tr>
+                          <br/>
                           <tr>
                           <td colspan="2">
                             <div className='form-group'>
                                 <label style={{fontWeight:'700'}}>Reason For "Other": </label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;
                                 {Leave_Reason_Other} 
                                 
                                 
                             </div>
                           </td>
                           </tr>
+                          <br/>
                           <tr>
                           <td>
                             <div className='form-group'>
@@ -146,7 +149,7 @@ useEffect(function effectFunction() {
                           </td>
                           <td>
                             <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Leave To:</label>:
+                                <label style={{fontWeight:'700'}}>Leave To:</label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {Leave_To} 
                               
@@ -158,24 +161,32 @@ useEffect(function effectFunction() {
                           <tr>
                           <td colspan="2">
                             <div>
-                              <p>-------------------------------------------------------------------------------------------------------------------------------------------</p>
+                              <p>---------------------------------------------------------------------------------------------------</p>
                               <p style={{marginLeft:'750px'}}>*Manager Only</p>
                             </div>
                           </td>
                           </tr>
+                          
                           <tr>
                             <td>
                               <div className='form-group'>
-                                  <label style={{fontWeight:'700'}}>Approval:</label><br />
+                                  <label style={{fontWeight:'700'}}>Approval:</label>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   {Approval}
                                   
                               </div>
                           </td>
                           </tr>
+                          <br/>
                           <tr>
                             <td colspan="2">
                               <div className='form-group'>
-                                  <label style={{fontWeight:'700'}}>Comments:</label><br />
+                                  <label style={{fontWeight:'700'}}>Comments:</label>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;
                                   {Comments}
                               </div>
                             </td>
