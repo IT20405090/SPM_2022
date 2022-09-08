@@ -17,18 +17,21 @@ import UpdateUser from "./components/admin/UpdateUser";
 import AdminCheckLeave from "./components/admin/AdminCheckLeave";
 import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
 
+
 //Anodya
 
-import Addtimetable from './components/admin/Addtimetable';  
-import UpdateTimeTable from './components/admin/UpdateTimeTable';
-import ViewTimeTable from './components/admin/ViewTimeTable'; 
+
  
 
 
 
 //customer
 //Anodya
-import C_ViewTimeTable from './components/customer/C_ViewTimeTable';   
+ 
+
+
+//customer
+
 
 
 
@@ -83,16 +86,9 @@ export default function Router() {
 						<Route exact path="/updateUser/:id" element={<UpdateUser/>}/>
 						<Route path="/AdminCheckLeave/:id" element={<AdminCheckLeave/>}/>
                     	<Route path="/AdminLeaveViewAll" element={<AdminLeaveViewAll/>}/>
-
-						<Route path = "/Addtimetable" element = {<Addtimetable/>}/>   
-						<Route path = "/ViewTimeTable" element = {<ViewTimeTable/>}/>   
-						<Route path = "/UpdateTimeTable/:id" element={<UpdateTimeTable/>}/>  
-						  
-					
                    
 
 						{/* customer */}
-						<Route path = "/C_ViewTimeTable" element={<C_ViewTimeTable/>}/>  
 				
 
 
