@@ -5,7 +5,7 @@ import {useState,useEffecr} from 'react'
 import axios from 'axios'
 //import useNavigation to navigate to another page
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from "../../public/back.jpg";
+import backgroundImage from "../../img/back2.jpg";
 
 
 

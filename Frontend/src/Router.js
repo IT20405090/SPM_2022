@@ -19,16 +19,16 @@ import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
 
 //Anodya
 
-import Addtimetable from './components/Addtimetable';  
-import UpdateTimeTable from './components/UpdateTimeTable';
-import ViewTimeTable from './components/ViewTimeTable'; 
+import Addtimetable from './components/admin/Addtimetable';  
+import UpdateTimeTable from './components/admin/UpdateTimeTable';
+import ViewTimeTable from './components/admin/ViewTimeTable'; 
  
 
 
 
 //customer
 //Anodya
-import C_ViewTimeTable from './components/C_ViewTimeTable';   
+import C_ViewTimeTable from './components/customer/C_ViewTimeTable';   
 
 
 

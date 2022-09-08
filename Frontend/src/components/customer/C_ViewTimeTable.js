@@ -1,6 +1,6 @@
 import React, { Component } from  'react';
 import axios from 'axios';
-import backgroundImage from "../../public/back2.jpg";
+import backgroundImage from "../../img/back2.jpg";
 
 export default class C_ViewTimeTable extends Component{
     constructor(props){
