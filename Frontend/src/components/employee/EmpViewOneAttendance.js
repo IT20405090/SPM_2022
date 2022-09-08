@@ -7,6 +7,9 @@ import axios from 'axios'
 //import useParams
 import {useParams} from 'react-router-dom';
 
+//import the image
+import AttView from '../../img/AttView.png'
+
 function ViewOneAttendance() {
 
      //track the states in function and set values with useState 
@@ -67,10 +70,13 @@ function ViewOneAttendance() {
                     <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>YOUR ATTENDANCE {Date}</h1>
                     <div style={{height:'80px', backgroundColor:"#ff8347", marginTop:'-50px'}}></div>
                 </div>
-                    <br/>
                     
-                    <table className='tableEmpAttOne' style={{ width:'30%', height:'40%', marginLeft:'540px',marginTop:'100px',fontSize:'20px', 
-                    backgroundColor:'#d3d3d3', border:"1px solid black"}}>
+                    
+                    <div style={{backgroundColor:'#d3d3d3'}}>
+                    <table className='tableEmpAttOne' style={{ width:'40%', height:'40%', marginLeft:'540px',marginTop:'70px',fontSize:'20px'}}>
+                      <tr colspan="2">
+                       <img src={AttView} style={{ width: "450px", marginLeft:"50px"}}></img>
+                       </tr>
                      <tr>
                       <th colspan="2"> <center>---Check The Details---</center> </th>
                       </tr>
@@ -107,13 +113,16 @@ function ViewOneAttendance() {
                        
                     </table>
                     <br/>
-                            <button className="btn btn-success" style={{marginLeft:'700px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
+                            <button className="btn btn-success" style={{marginLeft:'750px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
                             <a href="/EmpViewAllAttendance"
                             style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
                             <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
-                            
+                            <br/>     
                     </div>
-                    <br/>
+                    
+                    
+                    </div>
+                    
 
     </div>
   )

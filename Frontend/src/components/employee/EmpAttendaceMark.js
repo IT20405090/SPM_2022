@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+//import the image
+import Attendance from '../../img/Attendance.png'
+
 
 
 const EmpAttendaceMark = () => {
@@ -166,6 +169,9 @@ const EmpAttendaceMark = () => {
               </button>
 
             <div style={{width:'800px', marginLeft:'350px',backgroundColor:'#8c9090'}}>
+
+            <img src={Attendance} style={{ width: "600px", marginLeft:'90px'}}></img>
+
               <br/>
                 <center><h2>FILL THE DETAILS</h2></center>
               <br/> 
