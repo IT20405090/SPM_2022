@@ -69,20 +69,22 @@ const Register = () => {
 	return (
 		<div className="register-form">
 <div className="container" backgroundColor="bg-secondary">
-			<table>
-			<h1 className="heading">User Registration Form</h1>
-			<br/>
+<h1 className="heading">User Registration Form</h1>
 			<p className="lead">
 				<i className="fas fa-user"></i> Create Your Account
 			</p>
+			<table>
+			
+			<br/>
+			
              <tr>
              <td>
             <div >
             <form  style={{backgroundColor:"#ebecf0"}} onSubmit={(e) => onSubmit(e)}>
             
             <div className="form-group">
-              
-            <label className="form-label"><h4>Name of the Employee : </h4></label>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <label className="form-label"><h4>Name of the Employee : </h4></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<input type="text"
 						class="form-control"
 						placeholder="Name"
