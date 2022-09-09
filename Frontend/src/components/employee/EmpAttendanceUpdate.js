@@ -7,6 +7,9 @@ import axios from 'axios';
 //import useParams (use to access the matching data)
 import{useParams} from "react-router-dom";
 
+//import the image
+import AttEdits from '../../img/AttEdits.png'
+
 function AttendanceUpdate() {
 
   //track the states in function and set values with useState 
@@ -168,7 +171,11 @@ useEffect(function effectFunction() {
               style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
               <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
 
-         
+<table>
+  <tr>
+    <td> <img src={AttEdits} style={{ width: "400px", marginLeft:'90px'}}></img></td>
+             
+             <td>
               <form style={{width:'50%', marginLeft:'450px'}}>
                         <div className="form-group">
                         <h5>Employee Name: </h5>
@@ -265,18 +272,25 @@ useEffect(function effectFunction() {
                         </div> */}
                         
               </form>
+              </td>
+              </tr>
+              </table> 
                   
-              <button className="btn btn-success" type="submit" style={{marginTop:'15px', width:"200px", 
-                      marginLeft:"600px",backgroundColor:"#484846"}} onClick={(e)=>ChangeOnClick(e)} >
+                      
+              <button className="btn btn-success" type="submit" style={{ width:"150px", 
+                      marginLeft:"950px", backgroundColor:"#484846"}} onClick={(e)=>ChangeOnClick(e)} >
                       <i class="fa-solid fa-pen-to-square"></i>
                       &nbsp; UPDATE
               </button>
-
-              <button className="btn btn-warning" style={{marginLeft:'70px',width:"200px",marginTop:'15px'}}
+              
+             
+              <button className="btn btn-warning" style={{width:"150px",marginLeft:"10px"}}
               onClick={refreshPage}>  
               <i class="fa-solid fa-arrow-rotate-right"></i>&nbsp;Refresh
               </button>
               
+              
+                           
               <br/> <br/><br/>
           </div>
                 
