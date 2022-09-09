@@ -7,6 +7,9 @@ import axios from 'axios';
 //import useParams (use to access the matching data)
 import{useParams} from "react-router-dom";
 
+//import the image
+import AdminLeave from '../../img/AdminLeave.png'
+
 function AdminCheckLeave() {
 
   //track the states in function and set values with useState 
@@ -156,9 +159,12 @@ useEffect(function effectFunction() {
        </div>
 
        <br/>
+       
 
 
-       <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#d9d9d9", padding:'10px 20% 10px 20%' }}>
+       <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#f5f5f5", padding:'10px 20% 10px 20%' }}>
+
+       <img src={AdminLeave} style={{ width: 700, marginTop: '10px', marginBottom: '10px', marginLeft: '70px', marginRight: '10px' }}></img>
                   <form >
                       <div className='form-group'>
                         <label style={{fontWeight:'700'}} >Submitted Date:</label> {Today}   
