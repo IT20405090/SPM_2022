@@ -16,7 +16,7 @@ const Register = () => {
 		password2: "",
 		address:"",
 		mobileno:"+94",
-		userRole:"customer"
+		userRole:"Customer"
 	});
 
 	const { name, email, password, password2 , address , mobileno } = formData;

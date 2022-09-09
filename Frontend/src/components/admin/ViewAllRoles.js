@@ -21,7 +21,7 @@ const Viewallusers = () => {
         let cusdata =[];
         console.log("All Customers",data?.data);
          data?.data.map((customers)=>{
-            if(customers?.userRole == "customer")
+            if(customers?.userRole == "Customer")
             {
                 cusdata.push(customers);
             }
@@ -41,7 +41,7 @@ const Viewallusers = () => {
          let empdata =[];
          console.log("All Employees",data?.data);
           data?.data.map((employees)=>{
-             if(employees?.userRole == "employee")
+             if(employees?.userRole == "Employee")
              {
                  empdata.push(employees);
              }

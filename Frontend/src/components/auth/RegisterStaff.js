@@ -16,7 +16,7 @@ const RegisterStaff = () => {
 		password2: "",
 		address:"",
 		mobileno:"+94",
-		userRole:"employee"
+		userRole:"Employee"
 	});
 
 	const { name, email, password, password2 , address , mobileno } = formData;
@@ -39,7 +39,7 @@ const RegisterStaff = () => {
 					title: 'Congrats!',
 					text: 'Register successfull...!',
 				  })
-				navigate("/login");
+				navigate("/dashboard");
 			}
 			else
 			{

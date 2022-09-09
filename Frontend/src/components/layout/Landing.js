@@ -13,7 +13,7 @@ const Landing = () => {
 				<div className="landing-inner">
 
 					<div className = "home" >
-					<b>DRAS Fuel Station </b>
+					<h1><b>DRAS Gasoline Station </b></h1>
 					</div>
 					
 					<br />
