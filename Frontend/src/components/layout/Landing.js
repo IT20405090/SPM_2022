@@ -16,16 +16,21 @@ const Landing = () => {
 					<h1><b>DRAS Gasoline Station </b></h1>
 					</div>
 					
-					<br />
+					<br /><br/>
+					
+					<h5>With new technological advancements, everything is automated. Subscribe to this system that we have introduced to our service area and find out how you can accomplish all your daily tasks effortlessly.</h5>
+					<br/> <br/>
 					<div className="buttons">
-						<Link to="/register" className="btn-lg btn-success">
+						<Link to="/register" className="btn btn-lg btn-block">
 							Sign Up
 						</Link>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<Link to="/login" className="btn-lg btn-success">
-							Login
+						<Link to="/login" className="btn btn-lg btn-block">
+							Sign In
 						</Link>
 					</div>
+				
 				</div>
 			</div>
 		</section>

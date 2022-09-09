@@ -22,6 +22,7 @@ const Dashboard = () => {
 						<td>
 							<center><h2 style={{marginTop: '0px',marginBottom: '20px',color:"purple"}}>Welcome to DRAS {localStorage.getItem("user")}</h2></center>
 							<center><h2 style={{marginTop: '20px',marginBottom: '20px',color:"red"}}>Your Role is : {localStorage.getItem("userRole")}</h2></center>
+							
 						</td>
 					
 						<td>

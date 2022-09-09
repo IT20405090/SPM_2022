@@ -68,7 +68,7 @@ const Register = () => {
 
 	return (
 		<div className="register-form">
-
+<div className="container" backgroundColor="bg-secondary">
 			<table>
 			<h1 className="heading">User Registration Form</h1>
 			<br/>
@@ -179,6 +179,7 @@ const Register = () => {
              </td>
              </tr>
              </table>
+			 </div>
 			 
 </div>
 	);

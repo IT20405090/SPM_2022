@@ -131,9 +131,19 @@ a {
 	max-width: 70%;
 }
 
-.landing-inner .buttons {
-	margin-top: 1rem;
+.landing-inner .btn-lg {
+    font-size: 20px;
+	background-color:#6cafa4;
+	border-radius: 8px;
+	color: white;
+	text-decoration: none;
+    width:100%;    
+	display:inline;
 }
+
+/* .landing-inner .buttons {
+	margin-top: 1rem;
+} */
 
 .register-form,
 .login-form {

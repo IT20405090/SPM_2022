@@ -44,6 +44,7 @@ const Login = () => {
 	return (
 		<div>
 			<center>
+			<br/><br/>
 			<h1 className="heading">Log In</h1>
 			<p className="lead">
 				<i className="fas fa-user"></i> Log Into Your Account
