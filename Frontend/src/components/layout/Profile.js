@@ -115,10 +115,10 @@ const Profile = () => {
   };
 
   return (
-    <div style={{ marginTop: "70px", marginBottom: "70px" }}>
+    <div style={{ marginTop: "70px", marginBottom: "70px" }} >
       <div>
         <center>
-        <Card class="p-3 mb-2 bg-secondary text-white" style={{ marginLeft: "30px", marginRight: "30px" }}>
+        <Card class="p-3 mb-2 bg-secondary text-white" style={{ marginLeft: "200px", marginRight: "200px" }}>
           <CardHeader>
             <CardTitle style={{ color: "purple", fontSize: "30px" }}>
               My Profile

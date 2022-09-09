@@ -71,7 +71,7 @@ const Login = () => {
 						required
 					/>
 				</div>
-				<input type="submit" className="btn btn-warning" value="Login" />
+				<input type="submit" className="btn btn-secondary" value="Login" />
 			</form>
 			<p className="link">
 				Don't have an account? <Link to="/register">Sign Up</Link>

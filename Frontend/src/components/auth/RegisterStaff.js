@@ -147,7 +147,7 @@ const RegisterStaff = () => {
             </div>
             <br/>
             
-            <input type="submit" className="btn-lg btn-primary" value="Register" />
+            <input type="submit" className="btn-lg btn-secondary" value="Register" />
             
     
             <br/>
@@ -158,7 +158,7 @@ const RegisterStaff = () => {
          
             <td>
             <center>
-			&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; <img src={grp} class="img-fluid" alt="" width="650" height="1000" />
+			&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; <img src={grp} class="img-fluid" alt="" width="600" height="1000" />
              </center>
              </td>
              </tr>
