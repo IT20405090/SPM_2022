@@ -55,9 +55,12 @@ const RegisterStaff = () => {
 
 	return (
 		<div className="register-form">
+			<div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
+			
+		<h1 className="heading">Employee Registration</h1>
+		</div>
+		<table>
 
-<table>
-<h1 className="heading">Employee Registration</h1>
 <br/>
              <tr>
              <td>
@@ -65,8 +68,8 @@ const RegisterStaff = () => {
             <form  style={{backgroundColor:"#ebecf0"}} onSubmit={(e) => onSubmit(e)}>
             
             <div className="form-group">
-              
-            <label className="form-label"><h4>Name of the Employee : </h4></label>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <label className="form-label"><h4>Name of the Employee : </h4></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<input type="text"
 						class="form-control"
 						placeholder="Name"

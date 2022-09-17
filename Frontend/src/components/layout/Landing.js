@@ -18,7 +18,7 @@ const Landing = () => {
 					
 					<br /><br/>
 					
-					<h5>With new technological advancements, everything is automated. Subscribe to this system that we have introduced to our service area and find out how you can accomplish all your daily tasks effortlessly.</h5>
+					<h4>With new technological advancements, everything is automated. Subscribe to this system that we have introduced to our service area and find out how you can accomplish all your daily tasks effortlessly.</h4>
 					<br/> <br/>
 					<div className="buttons">
 						<Link to="/register" className="btn btn-lg btn-block">

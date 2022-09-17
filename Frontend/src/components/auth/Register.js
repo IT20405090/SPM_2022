@@ -68,8 +68,9 @@ const Register = () => {
 
 	return (
 		<div className="register-form">
-<div className="container" backgroundColor="bg-secondary">
-<h1 className="heading">User Registration Form</h1>
+		<div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
+		<h1 className="heading">User Registration Form</h1>
+		</div>
 			<p className="lead">
 				<i className="fas fa-user"></i> Create Your Account
 			</p>
@@ -183,7 +184,7 @@ const Register = () => {
              </table>
 			 </div>
 			 
-</div>
+
 	);
 };
 

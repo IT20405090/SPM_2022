@@ -45,7 +45,10 @@ const Login = () => {
 		<div>
 			<center>
 			<br/><br/>
+			<div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
 			<h1 className="heading">Log In</h1>
+			</div>
+			<br/>
 			<p className="lead">
 				<i className="fas fa-user"></i> Log Into Your Account
 			</p>
