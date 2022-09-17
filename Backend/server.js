@@ -12,7 +12,9 @@ const mongoose = require("mongoose");
 
 
 //import Routes 
+//ramona routes
 const user = require("./Routes/userRoutes");
+const fuel = require("./Routes/AddFuel");
 
 //anodya routes
 const TimetableRoutes = require ('./Routes/TimetableRoutes');
@@ -48,6 +50,7 @@ app.use(EmpLeaveForm);
 
 //ramona
 app.use("/user",user);
+app.use(fuel);
 
 //anodya
 app.use(TimetableRoutes);
