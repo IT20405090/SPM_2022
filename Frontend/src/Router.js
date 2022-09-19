@@ -16,6 +16,9 @@ import ViewAllRoles from "./components/admin/ViewAllRoles";
 import UpdateUser from "./components/admin/UpdateUser";
 import AdminCheckLeave from "./components/admin/AdminCheckLeave";
 import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
+import AddFuel from "./components/admin/AddFuel";
+import ViewAllFuel from "./components/admin/ViewAllFuel";
+import EditFuel from "./components/admin/EditFuel";
 
 
 //Anodya
@@ -90,12 +93,15 @@ export default function Router() {
 				
 						<Route exact path="/ViewAllRoles" element={<ViewAllRoles/>}/>
 						<Route exact path="/updateUser/:id" element={<UpdateUser/>}/>
+						<Route  path = "/AddFuel" element = {<AddFuel/>}/>
 						<Route path="/AdminCheckLeave/:id" element={<AdminCheckLeave/>}/>
                     	<Route path="/AdminLeaveViewAll" element={<AdminLeaveViewAll/>}/>
 
 						<Route    path = "/Addtimetable" element = {<Addtimetable/>}/>   
 						<Route    path = "/ViewTimeTable" element = {<ViewTimeTable/>}/>   
 						<Route path = "/UpdateTimeTable/:id" element={<UpdateTimeTable/>}/>  
+						<Route path = "/ViewAllFuel" element={<ViewAllFuel/>}/>
+						<Route path="/:id" element={<EditFuel/>}/>
 					    
 					
                    

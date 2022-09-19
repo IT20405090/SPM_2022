@@ -42,7 +42,7 @@ const Navbar = () => {
 
                 {/*  admin Pages */}
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Fuel Information</a>
-                <a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Staff Allocation</a>
+                <a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/AddFuel" aria-current="page">Add Fuel Stock</a>
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Salary Information</a>
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/Addtimetable" aria-current="page">Add Time Table</a>
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/AdminLeaveViewAll" aria-current="page">View Leaves</a>
@@ -64,7 +64,7 @@ const Navbar = () => {
             </div>
           </div>
 		  <Link to="/userprofile">
-			<button  className="btn btn-success" type="submit" style={{ float: "right", display: userRole ? "flex" : "none" , textDecoration:"none"}}>
+			<button  className="btn btn-secondary" type="submit" style={{ float: "right", display: userRole ? "flex" : "none" , textDecoration:"none"}}>
 				Profile
 			</button>
 		  </Link>	
