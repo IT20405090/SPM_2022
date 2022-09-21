@@ -97,7 +97,7 @@ filterData(GetAllFuel,searchKey){
           onChange={this.handleSearchArea}>
             </input>
     
-        <br></br>
+        
       
       </div>
 
