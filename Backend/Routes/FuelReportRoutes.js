@@ -1,6 +1,6 @@
 const express = require('express');
-const fuelreport = require('../Models/FuelReport');
-const FuelReport = require('../Models/FuelReport');
+const fuelreport = require('../Model/FuelReport');
+const FuelReport = require('../Model/FuelReport');
 
 const router = express.Router();
 
