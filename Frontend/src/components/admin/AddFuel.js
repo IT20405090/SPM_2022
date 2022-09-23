@@ -162,13 +162,19 @@ function AddFuel() {
                     <div className='form-group'>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <label>Name of Fuel: </label><br />&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type='text'
+                        <select type='text'
+                        id = 'Fname'
                          value={Fname} 
                          placeholder="Diesel / Petrol"
                          className='form-control' 
                          style={{ marginBottom: '20px', marginLeft:'10px', marginRight:'20px' }}
                          onChange={(e) => HandleFname(e)} 
-                         required='true' />
+                         required='true' >
+                          <option value=" ">Petrol / Diesel</option>
+                                      <option value="Petrol">Petrol</option>
+                                      <option value="Diesel">Diesel</option>
+                                      
+                          </select>
                     </div>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                    <br/>
