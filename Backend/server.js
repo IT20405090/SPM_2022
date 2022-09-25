@@ -23,6 +23,7 @@ const FuelReportRoutes = require ('./Routes/FuelReportRoutes');
 //Disni Routes
 const EmpAttendace= require('./Routes/EmpAttendace')
 const EmpLeaveForm=require('./Routes/EmpLeaveForm')
+const EmpSalary =require('./Routes/EmpSalary')
 
 //invoke app 
 const app = express();
@@ -48,6 +49,7 @@ dotenv.config();
 //disni
 app.use(EmpAttendace);
 app.use(EmpLeaveForm);
+app.use(EmpSalary);
 
 //ramona
 app.use("/user",user);
