@@ -18,6 +18,7 @@ const fuel = require("./Routes/AddFuel");
 
 //anodya routes
 const TimetableRoutes = require ('./Routes/TimetableRoutes');
+const FuelReportRoutes = require ('./Routes/FuelReportRoutes');
 
 //Disni Routes
 const EmpAttendace= require('./Routes/EmpAttendace')
@@ -54,6 +55,8 @@ app.use(fuel);
 
 //anodya
 app.use(TimetableRoutes);
+app.use(FuelReportRoutes);
+
 
 
 //connect the app with mongo db with mongoose
