@@ -4,6 +4,9 @@ import React, { Component } from 'react'
 //import axios
 import axios from 'axios'
 
+//import backgroud picture
+import BgEmp2 from '../../img/BgEmp2.webp';
+
 export default class EmpViewAllLeaves extends Component {
 
     //initialize constructor to pass the props
@@ -87,8 +90,9 @@ filterData(GetAllLeavesEmp,searchKey){
                 
                 <div style={{height:'80px', backgroundColor:"#ff8347", marginTop:'-50px'}}></div>
                 </div>
-                <br/> <br/> <br/><br/>
+                <br/> <br/> <br/>
 
+              <div style={{backgroundImage: `url(${BgEmp2})`,   backgroundSize: 'cover'}}>
                 <button className="btn btn-success" 
                   style={{marginLeft:'50px',padding:'8px 8px',backgroundColor:'#3895d3'}}>
                   <a href="/dashboard" style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'16px'}}> 
@@ -106,7 +110,7 @@ filterData(GetAllLeavesEmp,searchKey){
                     </input>
             
                 <br></br>
-                <p> *Enter Your Name Or The Date To Search</p>
+                <p style={{color:"white",textShadow: '1px 2px 5px black'}}> *Enter Your Name Or The Date To Search</p>
               
               </div>
 
@@ -116,12 +120,12 @@ filterData(GetAllLeavesEmp,searchKey){
               <table className="table table-hover" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
                   <thead>
                     <tr style={{fontSize:'20px'}}>
-                        <th scope="col">NO</th>
-                        <th scope="col">Date Of Request</th>
-                        <th scope="col">Emp_Name</th>
-                        <th scope="col">Emp_ID</th>
-                        <th scope="col">Reason For The Leave</th>
-                        <th scope="col">Approval</th>
+                        <th scope="col" style={{color:"white",textShadow: '1px 2px 5px black'}}>NO</th>
+                        <th scope="col" style={{color:"white",textShadow: '1px 2px 5px black'}}>Date Of Request</th>
+                        <th scope="col" style={{color:"white",textShadow: '1px 2px 5px black'}}>Employee Name</th>
+                        <th scope="col" style={{color:"white",textShadow: '1px 2px 5px black'}}>Employee ID</th>
+                        <th scope="col" style={{color:"white",textShadow: '1px 2px 5px black'}}>Reason For The Leave</th>
+                        <th scope="col" style={{color:"white",textShadow: '1px 2px 5px black'}}>Approval</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
                         
@@ -134,15 +138,15 @@ filterData(GetAllLeavesEmp,searchKey){
 
                     {this.state.GetAllLeavesEmp.map((GetAllLeaveReq,index)=>(
                     <tr key ={index}>
-                      <th scope='row'>{index+1}</th>
-                      <td>{GetAllLeaveReq.Today}</td>
-                      <td>{GetAllLeaveReq.Emp_Name}</td>
-                      <td>{GetAllLeaveReq.Emp_ID}</td> 
-                      <td><a href={`EmpLeaveViewOne/${GetAllLeaveReq._id}`} style={{textDecoration:'none' }}>
+                      <th style={{color:"white",textShadow: '1px 2px 5px black'}} scope='row'>{index+1}</th>
+                      <td style={{color:"white",textShadow: '1px 2px 5px black'}}>{GetAllLeaveReq.Today}</td>
+                      <td style={{color:"white",textShadow: '1px 2px 5px black'}}>{GetAllLeaveReq.Emp_Name}</td>
+                      <td style={{color:"white",textShadow: '1px 2px 5px black'}}>{GetAllLeaveReq.Emp_ID}</td> 
+                      <td style={{textShadow: '1px 2px 5px black'}}><u><a href={`EmpLeaveViewOne/${GetAllLeaveReq._id}`} style={{textDecoration:'none', color:"white" }}>
                             {GetAllLeaveReq.Leave_Reason}
-                        </a>
+                        </a></u>
                       </td> 
-                      <td>{GetAllLeaveReq.Approval}</td>
+                      <td style={{color:"white",textShadow: '1px 2px 5px black'}}>{GetAllLeaveReq.Approval}</td>
 
                       <td>
                       <a className ="btn btn-warning" href={`/EmpLeaveEdit/${GetAllLeaveReq._id}`}>
@@ -163,7 +167,8 @@ filterData(GetAllLeavesEmp,searchKey){
                   </tbody>
 
               </table>
-
+              <br/>
+              </div>
       </div>
     )
   }

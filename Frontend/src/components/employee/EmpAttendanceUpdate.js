@@ -10,6 +10,9 @@ import{useParams} from "react-router-dom";
 //import the image
 import AttEdits from '../../img/AttEdits.png'
 
+//import backgroud picture
+import BgEmp4 from '../../img/BgEmp4.jpeg';
+
 function AttendanceUpdate() {
 
   //track the states in function and set values with useState 
@@ -162,7 +165,7 @@ useEffect(function effectFunction() {
 
               
 
-            <div style={{backgroundColor:'#d9d9d9', marginTop:'70px'}}>
+            <div style={{ backgroundImage: `url(${BgEmp4})`,   backgroundSize: 'cover', marginTop:'70px'}}>
 
               <br/>
 
@@ -176,7 +179,7 @@ useEffect(function effectFunction() {
                   <td> <img src={AttEdits} style={{ width: "400px", marginLeft:'90px'}}></img></td>
                           
                   <td>
-                          <form style={{width:'50%', marginLeft:'450px'}}>
+                          <form style={{width:'60%', marginLeft:'450px',fontSize:'18px', color:"white",textShadow: '1px 2px 5px black',background:"rgba(178,34,34,0.35)"}}>
                           <div className='form-group'>
                                         <h5>Month: </h5>
                                           <select
@@ -282,7 +285,7 @@ useEffect(function effectFunction() {
               </table> 
                   
                       
-              <button className="btn btn-success" type="submit" style={{ width:"150px", 
+              <button className="btn btn-secondary" type="submit" style={{ width:"150px", 
                       marginLeft:"950px", backgroundColor:"#484846"}} onClick={(e)=>ChangeOnClick(e)} >
                       <i class="fa-solid fa-pen-to-square"></i>
                       &nbsp; UPDATE
