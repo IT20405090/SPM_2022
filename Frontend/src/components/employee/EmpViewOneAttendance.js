@@ -16,6 +16,7 @@ function ViewOneAttendance() {
   const [Emp_Name, setEmp_Name]=useState("");
   const [Emp_ID, setEmp_ID]=useState("");
   const [Date, setDate]=useState("");
+  const [Month, setMonth]=useState("");
   const [Shift, setShift]=useState("");
   const [Time_In, setTime_In]=useState("");
   const [Time_Out, setTime_Out]=useState("");
@@ -30,6 +31,7 @@ function ViewOneAttendance() {
           Emp_Name:"",
           Emp_ID:"",
           Date:"",
+          Month:"",
           Shift:"",
           Time_In:"",
           Time_Out:"",
@@ -48,6 +50,7 @@ function ViewOneAttendance() {
       setEmp_Name(res.data.oneAttendance.Emp_Name)
       setEmp_ID(res.data.oneAttendance.Emp_ID)
       setDate(res.data.oneAttendance.Date)
+      setMonth(res.data.oneAttendance.Month)
       setShift(res.data.oneAttendance.Shift)
       setTime_In(res.data.oneAttendance.Time_In)
       setTime_Out(res.data.oneAttendance.Time_Out)
@@ -67,48 +70,67 @@ function ViewOneAttendance() {
             <div >
                 <div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
                     <br/><br/>
-                    <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>YOUR ATTENDANCE {Date}</h1>
+                    <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>YOUR ATTENDANCE FOR {Date} </h1>
+                    
                     <div style={{height:'80px', backgroundColor:"#ff8347", marginTop:'-50px'}}></div>
                 </div>
                     
                     
                     <div style={{backgroundColor:'#d3d3d3'}}>
-                    <table className='tableEmpAttOne' style={{ width:'40%', height:'40%', marginLeft:'540px',marginTop:'70px',fontSize:'20px'}}>
+                    <table className='tableEmpAttOne' style={{ width:'50%', height:'40%', marginLeft:'450px',marginTop:'70px',fontSize:'20px'}}>
                       <tr colspan="2">
-                       <img src={AttView} style={{ width: "450px", marginLeft:"50px"}}></img>
+                       <img src={AttView} style={{ width: "450px", marginLeft:"110px"}}></img>
                        </tr>
                      <tr>
                       <th colspan="2"> <center>---Check The Details---</center> </th>
                       </tr>
                       <br/>
                     <tr>
+                   
+                        <td> Attendance Date:</td> 
+                        <td>{Date}</td>
+                        
+                    </tr> 
+                    <br/>  
+                    <tr>
+                      
+                        <td> Month:</td> 
+                        <td>{Month}</td>
+
+                    </tr> 
+                    <br/>  
+                    <tr>
                       
                         <td> Employee Name:</td> 
                         <td>{Emp_Name}</td>
+
                     </tr> 
                     <br/>  
                     <tr>
                         <td> Employee ID:</td> 
                         <td>{Emp_ID}</td>
+
                     </tr>  
                     <br/>       
                     <tr>
                         <td> Shift:</td> 
                         <td>{Shift}</td>
+
                     </tr>  
                     <br/>  
                     <tr>
                         <td> Time In:</td> 
                         <td>{Time_In}</td>
+
                     </tr> 
                     <br/>       
                     <tr>
                         <td> Time Out:</td> 
                         <td>{Time_Out}</td>
+                        
                     </tr>   
                     
-                        {/* <th> {Total_Hours_per_Day}</th>
-                        <th> {Total_Hours_per_Month}</th> */}
+                       
                     <br/>
                        
                     </table>

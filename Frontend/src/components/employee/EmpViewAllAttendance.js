@@ -126,6 +126,7 @@ handleSearchArea=(e)=>{
                         <th scope="col">Emp_Name</th>
                         <th scope="col">Emp_ID</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Month</th>
                         <th scope="col">Shift</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
@@ -144,29 +145,27 @@ handleSearchArea=(e)=>{
                     {this.state.GetAllAtt.map((GetAllAtt,index)=>(
                     <tr key ={index}>
                       <th scope='row'>{index+1}</th>
-                      <td>{GetAllAtt.Emp_Name}</td>
-                      <td>{GetAllAtt.Emp_ID}</td> 
-                      <td><a href={`EmpViewOneAttendance/${GetAllAtt._id}`} style={{textDecoration:'none' }}>
-                          {GetAllAtt.Date}
-                          </a>
-                      </td> 
-                      <td>{GetAllAtt.Shift}</td> 
-                      {/* <td>{GetAllAtt.Time_In}</td> 
-                      <td>{GetAllAtt.Time_Out}</td>  */}
-                      {/* <td>{GetAllAtt.Total_Hours_per_Day}</td> 
-                      <td>{GetAllAtt.Total_Hours_per_Month}</td>  */}
-
-
+                        <td>{GetAllAtt.Emp_Name}</td>
+                        <td>{GetAllAtt.Emp_ID}</td> 
+                        <td><a href={`EmpViewOneAttendance/${GetAllAtt._id}`} style={{textDecoration:'none' }}>
+                            {GetAllAtt.Date}
+                            </a>
+                        </td> 
+                        <td>{GetAllAtt.Month}</td> 
+                        <td>{GetAllAtt.Shift}</td> 
                       
-                      <td>
-                      <a className ="btn btn-warning" href={`/EmpAttendanceUpdate/${GetAllAtt._id}`}>
-                          <i className="fas fa-edit"></i>&nbsp;Edit
-                          </a>
-                          &nbsp;
-                          <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(GetAllAtt._id)}>
-                          <i className ="far fa-trash-alt"> </i>&nbsp;Delete
-                          </a>  &nbsp;
-                      </td>
+
+
+                        
+                        <td>
+                        <a className ="btn btn-warning" href={`/EmpAttendanceUpdate/${GetAllAtt._id}`}>
+                            <i className="fas fa-edit"></i>&nbsp;Edit
+                            </a>
+                            &nbsp;
+                            <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(GetAllAtt._id)}>
+                            <i className ="far fa-trash-alt"> </i>&nbsp;Delete
+                            </a>  &nbsp;
+                        </td>
                     </tr>
 
                     
