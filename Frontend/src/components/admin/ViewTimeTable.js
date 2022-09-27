@@ -16,7 +16,7 @@ export default class ViewTimeTable extends Component{
     }
     
     retrieveTimetables(){
-      axios.get("http://localhost:8000/TimeTables").then(res =>{
+      axios.get("http://localhost:5000/TimeTables").then(res =>{
         if(res.data.success){
           this.setState({
             timetable:res.data.existingTimeTables
@@ -30,7 +30,7 @@ export default class ViewTimeTable extends Component{
     
     onDelete = (id) =>{
     
-      axios.delete(`http://localhost:8000/TimeTables/delete/${id}`).then((res)=>{
+      axios.delete(`http://localhost:5000/TimeTables/delete/${id}`).then((res)=>{
           alert("Delete successfully");
           this.retrieveTimetables();
             
@@ -49,7 +49,7 @@ export default class ViewTimeTable extends Component{
     handleSearchArea = (e) =>{
       const searchKey = e.currentTarget.value;
     
-      axios.get("http://localhost:8000/TimeTables").then(res=>{
+      axios.get("http://localhost:5000/TimeTables").then(res=>{
         if(res.data.success){
           this.filterData(res.data.existingTimeTables,searchKey)
         }
@@ -78,7 +78,8 @@ export default class ViewTimeTable extends Component{
             <br/>
 
         <hr/>
-
+        <button className="btn btn-outline-warning"><a href='/Addtimetable'>Add New Time Table</a></button>
+        <br/>
         <center>
         <div className="col-lg-9 mt-2 mb-2">
               <input
@@ -96,7 +97,7 @@ export default class ViewTimeTable extends Component{
        
             <br/>
             <center>
-            <table className = "table table-bordered">
+            <table className = "table table-bordered" style={{backgroundColor:"black"}}>
                 <thead>
                     <tr>
                     <th style={{color:'white'}} scope = "col"></th>  
@@ -162,7 +163,7 @@ export default class ViewTimeTable extends Component{
 
         </center>
         <br/>
-        <button className="btn btn-outline-warning"><a href='/Addtimetable'>Add New Time Table</a></button>
+       
 
         </div>
          
