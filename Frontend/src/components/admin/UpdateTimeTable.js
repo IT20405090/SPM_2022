@@ -91,7 +91,7 @@ console.log(timetable);
 
 //update process 
 console.log(id)
-await axios.put(`http://localhost:8000/TimeTables/update/${id.id}`,timetable)
+await axios.put(`http://localhost:5000/TimeTables/update/${id.id}`,timetable)
 .then(res=>{
   console.log("Return Data",res);
   alert("Update Success!!");
@@ -110,7 +110,7 @@ await axios.put(`http://localhost:8000/TimeTables/update/${id.id}`,timetable)
 useEffect(function effectFunction() {
   console.log("get ID",id);
 
-  axios.get(`http://localhost:8000/TimeTables/getbyid/${id.id}`)
+  axios.get(`http://localhost:5000/TimeTables/${id.id}`)
   .then(res=>{
     console.log("data",res);
     setDate(res.data.timetable.Date)

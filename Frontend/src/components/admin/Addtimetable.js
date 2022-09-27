@@ -140,7 +140,7 @@ function Addtimetable() {
         console.log("Sending time table Details...",newData);
   
 
-        let data= await axios.post('http://localhost:8000/TimeTables/Save',{
+        let data= await axios.post('http://localhost:5000/TimeTables/Save',{
           Date:Date,
           FuelType:FuelType,
           ArrivalDate:ArrivalDate,
