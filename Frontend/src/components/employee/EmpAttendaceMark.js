@@ -19,6 +19,7 @@ const EmpAttendaceMark = () => {
     const [Shift, setShift]=useState("");
     const [Time_In, setTime_In]=useState("");
     const [Time_Out, setTime_Out]=useState("");
+    const [Month, setMonth]=useState("");
     // const [Total_Hours_per_Day,  setTotal_Hours_per_Day]=useState("");
     // const [Total_Hours_per_Month,setTotal_Hours_per_Month]=useState("");
 
@@ -53,6 +54,11 @@ const EmpAttendaceMark = () => {
       e.preventDefault();
       setDate(e.target.value)
     }
+   
+    const handle_Month_Change=(e)=>{
+      e.preventDefault();
+      setMonth(e.target.value)
+    }
 
     const handle_Shift_Change=(e)=>{
       e.preventDefault();
@@ -85,6 +91,7 @@ const EmpAttendaceMark = () => {
         setEmp_Name("");
         setEmp_ID("");
         setDate("");
+        setMonth("");
         setShift("");
         setTime_In("");
         setTime_Out("");
@@ -100,7 +107,7 @@ const EmpAttendaceMark = () => {
     const handleSubmit = async (e)=>{
       e.preventDefault();
 
-      if(Emp_Name===''|| Emp_ID===''||Date===''|| Shift===''|| Time_In===''||Time_Out===''){
+      if(Emp_Name===''|| Emp_ID===''||Date===''|| Shift===''|| Time_In===''||Time_Out===''||Month===''){
         alert("Fill All The Details!!")
 
       }else {
@@ -109,6 +116,7 @@ const EmpAttendaceMark = () => {
           Emp_Name:Emp_Name,
           Emp_ID:Emp_ID,
           Date:Date,
+          Month:Month,
           Shift:Shift,
           Time_In:Time_In,
           Time_Out:Time_Out,
@@ -122,6 +130,7 @@ const EmpAttendaceMark = () => {
           Emp_Name:Emp_Name,
           Emp_ID:Emp_ID,
           Date:Date,
+          Month:Month,
           Shift:Shift,
           Time_In:Time_In,
           Time_Out:Time_Out,
@@ -178,6 +187,38 @@ const EmpAttendaceMark = () => {
               
                <form onSubmit={(e) => handleSubmit(e)} >
                 <table className='table' >
+
+                  <tr>
+                  <td>
+                  <div className='form-group'>
+                            <label>Month :</label><br />
+                              <select
+                              id="Month" 
+                              className="form-control"
+                              name="Month"
+                              placeholder="Select The Month"
+                              value={Month}
+                              onChange={(e) => handle_Month_Change(e)} required='true'>
+                                      <option value=" ">Choose</option>
+                                      <option value="January">January</option>
+                                      <option value="February">February</option>
+                                      <option value="March">March</option>
+                                      <option value="April">April</option>
+                                      <option value="May">May</option>
+                                      <option value="June">June</option>
+                                      <option value="July">July</option>
+                                      <option value="August">August</option>
+                                      <option value="September">September</option>
+                                      <option value="October">October</option>
+                                      <option value="November">November</option>
+                                      <option value="December">December</option>
+                                          
+                              </select>
+                        </div>
+                    </td>
+                  </tr>
+
+
                   <tr>
                     <td>
                     <div className='form-group' >
@@ -267,28 +308,6 @@ const EmpAttendaceMark = () => {
                     </div>
                     </td>
                     </tr>
-
-                     {/* <div className='form-group'>
-                        <label>Total_Hours_per_Day</label><br />
-                          <input 
-                          type='text' 
-                          value={Total_Hours_per_Day} 
-                          className='form-control' 
-                          style={{ marginBottom: '20px' }} 
-                          onChange={(e) => handle_Total_Hours_per_Day_Change(e)} 
-                          required='true' />
-                    </div> 
-
-                     <div className='form-group'>
-                        <label>Total_Hours_per_Month</label><br />
-                          <input 
-                          type='text' 
-                          value={Total_Hours_per_Month}  
-                          className='form-control' 
-                          style={{ marginBottom: '20px' }} 
-                          onChange={(e) => handle_Total_Hours_per_Month_Change(e)} 
-                          required='true' />
-                    </div>  */}
 
                   </table>
                   <div>
