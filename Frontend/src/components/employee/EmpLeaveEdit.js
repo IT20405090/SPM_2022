@@ -6,6 +6,8 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 //import useParams (use to access the matching data)
 import{useParams} from "react-router-dom";
+//import backgroud picture
+import BgEmp1 from '../../img/BgEmp1.jpeg';
 
 function EmpLeaveEdit() {
 
@@ -146,12 +148,13 @@ useEffect(function effectFunction() {
             </div>
             <br/>
 
-            <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#d9d9d9", padding:'10px 20% 10px 20%' }}>
+            <div className='FORM2'style={{ marginTop: '40px',  backgroundImage: `url(${BgEmp1})`,   backgroundSize: 'cover', padding:'10px 20% 10px 20%'  }}>
 
 
            <form>
+            <br/>
               <div className="form-group">
-              <h2>Submitted Date</h2>
+              <lable style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Submitted Date:</lable>
                    <input type="date"
                    className="form-control"
                    name="Today"
@@ -161,147 +164,148 @@ useEffect(function effectFunction() {
                   
                    />
               </div>
-              <label style={{fontSize:'14px', color:'#d47400', marginLeft:'600px'}}>*Default Type/Pending Results Are "undifined" </label> 
-          <table className='tableLeaveEdit' style={{border:"1px solid black"}} >
+              <label style={{fontSize:'14px', color:"white", marginLeft:'600px',textShadow: '1px 2px 5px black'}}>*Default Type/Pending Results Are "undifined" </label> 
+         
+              <table className='tableLeaveEdit' style={{background:"rgba(80,80,80,0.45)"}}  >
             
-          <br/>
+                  <br/>
 
 
-            <tr>
-            <td>
-            <div className="form-group">
-              <label>Employee Name:</label><br/>
-                    <input type="text"
-                    className="form-control"
-                    style={{ marginBottom: '20px' }} 
-                    name="Emp_Name"
-                    onChange={e => setEmp_Name(e.target.value)}
-                    value={Emp_Name}
-                  
-                    />
-            </div>
-            </td>
-            <td>
-            <div className="form-group">
-              <label>Employee ID:</label>
-                    <input type="text"
-                    className="form-control"
-                    style={{ marginBottom: '20px' }} 
-                    name="Emp_ID"
-                    onChange={e => setEmp_ID(e.target.value)}
-                    value={Emp_ID}
-                  
-                      />
-            </div>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2">
-            <div className="form-group">
-            <label>Reason For The Leave:</label><br/>
-                <select type="text"
-                id='reason'
-                className="form-control"
-                style={{ marginBottom: '20px' }}
-                name="Leave_Reason"
-                onChange={e => setLeave_Reason(e.target.value)}
-                value={Leave_Reason}>
-                  <option value=" ">Choose</option>
-                                      <option value="Medical Leave">Medical Leave</option>
-                                      <option value="Clinic Day">Clinic Day</option>
-                                      <option value="Other">Other</option> 
-                </select>
-            </div>
-            </td>
-            </tr>
-            <tr>
-            <td colspan="2">
-            <div className="form-group">
-            <label>If Its "Other", Type The Reason Here:</label>
-                     <input type="text"
-                     className="form-control"
-                     name="Leave_Reason_Other"
-                     style={{ marginBottom: '20px' }}
-                     onChange={e => setLeave_Reason_Other(e.target.value)}
-                     value={Leave_Reason_Other}
-                    
-                     />
-                   
-                 </div>
-                 </td>
-                 </tr>
-                 <tr>
-                 <td>
-                 <div className="form-group">
-                 <label>Leave From:</label><br />
-                     <input type="date"
-                     className="form-control"
-                     name="Leave_From"
-                     style={{ marginBottom: '20px' }} 
-                     onChange={e => setLeave_From(e.target.value)}
-                     value={Leave_From}
-                    
-                     />
-                 </div>
-                 </td>
-                 <td>
-                 <div className="form-group">
-                     <label>Leave To:</label><br />
-                     <input type="date"
-                     className="form-control"
-                     name="Leave_To"
-                     style={{ marginBottom: '20px' }} 
-                     onChange={e => setLeave_To(e.target.value)}
-                     value={Leave_To}
-                    
-                     />
-                 </div>
-                 </td>
-                 </tr>
-
-                 <tr>
-                 <td colspan="2">
-                 <div>
-                  <p>-------------------------------------------------------------------------------------------------------</p>
-                  <p style={{marginLeft:'750px'}}>*Manager Only</p>
-                 </div>
-                 </td>
-                 </tr>
-
-                 <tr>
-                 <td>
-                 <div className='form-group'>
-                        <label>Approval: </label><br />
-                        <select 
-                          type='text'
-                          id='approval'  
-                          className='form-control' 
-                          style={{ marginBottom: '20px' }} 
-                          value={Approval}
-                          >
-                            <option value={Approval} >{Approval}</option>
+                    <tr>
+                    <td>
+                    <div className="form-group">
+                      <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Employee Name:</label><br/>
+                            <input type="text"
+                            className="form-control"
+                            style={{ marginBottom: '20px' }} 
+                            name="Emp_Name"
+                            onChange={e => setEmp_Name(e.target.value)}
+                            value={Emp_Name}
                           
-
-                          </select>
+                            />
+                    </div>
+                    </td>   
+                    <td>
+                    <div className="form-group">
+                      <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Employee ID:</label>
+                            <input type="text"
+                            className="form-control"
+                            style={{ marginBottom: '20px' }} 
+                            name="Emp_ID"
+                            onChange={e => setEmp_ID(e.target.value)}
+                            value={Emp_ID}
+                          
+                              />
                     </div>
                     </td>
                     </tr>
                     <tr>
-                      <td colspan="2">
-                      <div className='form-group'>
-                          <label>Comments:</label><br />
-                          <textarea 
-                          class="form-control" 
-                          id="Comments" 
-                          rows="3"
-                          placeholder={Comments}></textarea>
+                    <td colspan="2">
+                    <div className="form-group">
+                    <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Reason For The Leave:</label><br/>
+                        <select type="text"
+                        id='reason'
+                        className="form-control"
+                        style={{ marginBottom: '20px' }}
+                        name="Leave_Reason"
+                        onChange={e => setLeave_Reason(e.target.value)}
+                        value={Leave_Reason}>
+                          <option value=" ">Choose</option>
+                                              <option value="Medical Leave">Medical Leave</option>
+                                              <option value="Clinic Day">Clinic Day</option>
+                                              <option value="Other">Other</option> 
+                        </select>
                     </div>
                     </td>
-                   </tr>
-                   <br/><br/>
-                   
-                   </table> 
-                 </form>
+                    </tr>
+                    <tr>
+                    <td colspan="2">
+                    <div className="form-group">
+                    <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>If Its "Other", Type The Reason Here:</label>
+                            <input type="text"
+                            className="form-control"
+                            name="Leave_Reason_Other"
+                            style={{ marginBottom: '20px' }}
+                            onChange={e => setLeave_Reason_Other(e.target.value)}
+                            value={Leave_Reason_Other}
+                            
+                            />
+                          
+                        </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        <div className="form-group">
+                        <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Leave From:</label><br />
+                            <input type="date"
+                            className="form-control"
+                            name="Leave_From"
+                            style={{ marginBottom: '20px' }} 
+                            onChange={e => setLeave_From(e.target.value)}
+                            value={Leave_From}
+                            
+                            />
+                        </div>
+                        </td>
+                        <td>
+                        <div className="form-group">
+                            <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Leave To:</label><br />
+                            <input type="date"
+                            className="form-control"
+                            name="Leave_To"
+                            style={{ marginBottom: '20px' }} 
+                            onChange={e => setLeave_To(e.target.value)}
+                            value={Leave_To}
+                            
+                            />
+                        </div>
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td colspan="2">
+                        <div>
+                          <p style={{color:"white"}}>-----------------------------------------------------------------------------------------------------</p>
+                          <p style={{marginLeft:'750px',color:"white",textShadow: '1px 2px 5px black'}}>*Manager Only</p>
+                        </div>
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td>
+                        <div className='form-group'>
+                                <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Approval: </label><br />
+                                <select 
+                                  type='text'
+                                  id='approval'  
+                                  className='form-control' 
+                                  style={{ marginBottom: '20px' }} 
+                                  value={Approval}
+                                  >
+                                    <option value={Approval} >{Approval}</option>
+                                  
+
+                                  </select>
+                            </div>
+                            </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">
+                              <div className='form-group'>
+                                  <label style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>Comments:</label><br />
+                                  <textarea 
+                                  class="form-control" 
+                                  id="Comments" 
+                                  rows="3"
+                                  placeholder={Comments}></textarea>
+                            </div>
+                            </td>
+                          </tr>
+                          <br/><br/>
+                      
+              </table> 
+           </form>
 
                  
               
@@ -315,7 +319,7 @@ useEffect(function effectFunction() {
                       </button>
                    </td>
                    <td>
-                      <button className="btn btn-success" type="submit" style={{marginTop:'15px', width:"200px", 
+                      <button className="btn btn-secondary" type="submit" style={{marginTop:'15px', width:"200px", 
                       marginLeft:"350px",backgroundColor:"#484846"}} onClick={(e)=>ChangeOnClick(e)} >
                       <i class="fa-solid fa-pen-to-square"></i>
                       &nbsp; UPDATE

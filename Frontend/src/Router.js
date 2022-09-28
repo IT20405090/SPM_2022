@@ -57,6 +57,13 @@ import EmpViewAllLeaves  from "./components/employee/EmpViewAllLeaves";
 import EmpLeaveEdit from "./components/employee/EmpLeaveEdit";
 import EmpLeaveViewOne from "./components/employee/EmpLeaveViewOne";
 
+import AdminCreateSalary from "./components/admin/AdminCreateSalary";
+import AdminViewSalary from "./components/admin/AdminViewSalary";
+import ViewOneSalary from "./components/admin/ViewOneSalary";
+import AdminUpdateSalary from "./components/admin/AdminUpdateSalary";
+import AdminCheckAttendance from "./components/admin/AdminCheckAttendance";
+import AdminCheckAttOne from "./components/admin/AdminCheckAttOne";
+
 
 
 
@@ -85,6 +92,9 @@ export default function Router() {
 						<Route path="/EmpViewAllLeaves" element={<EmpViewAllLeaves/>}/>
 						<Route path="/EmpLeaveEdit/:id" element={<EmpLeaveEdit/>}/>
 						<Route path="/EmpLeaveViewOne/:id" element={<EmpLeaveViewOne/>}/>
+
+						
+                   
                     
 
 
@@ -96,6 +106,12 @@ export default function Router() {
 						<Route  path = "/AddFuel" element = {<AddFuel/>}/>
 						<Route path="/AdminCheckLeave/:id" element={<AdminCheckLeave/>}/>
                     	<Route path="/AdminLeaveViewAll" element={<AdminLeaveViewAll/>}/>
+						<Route path="/AdminCreateSalary" element={<AdminCreateSalary/>}></Route>
+						<Route path="/AdminViewSalary" element={<AdminViewSalary/>}></Route>
+						<Route path="/ViewOneSalary/:id" element={<ViewOneSalary/>}></Route>
+						<Route path="/AdminUpdateSalary/:id" element={<AdminUpdateSalary/>}></Route>
+						<Route path="/AdminCheckAttendance" element={<AdminCheckAttendance/>}></Route>
+						<Route path="/AdminCheckAttOne/:id" element={<AdminCheckAttOne/>}></Route>
 
 						<Route    path = "/Addtimetable" element = {<Addtimetable/>}/>   
 						<Route    path = "/ViewTimeTable" element = {<ViewTimeTable/>}/>   

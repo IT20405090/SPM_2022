@@ -43,7 +43,7 @@ const Navbar = () => {
                 {/*  admin Pages */}
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Fuel Information</a>
                 <a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/AddFuel" aria-current="page">Add Fuel Stock</a>
-				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Salary Information</a>
+				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/AdminViewSalary" aria-current="page">Salary Information</a>
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/Addtimetable" aria-current="page">Add Time Table</a>
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/AdminLeaveViewAll" aria-current="page">View Leaves</a>
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/ViewAllRoles" aria-current="page">View Roles</a>	
