@@ -235,8 +235,8 @@ function AddFuelReport(){
           <br/><br/>
         
           <center>
-          <h1 style={{marginTop:'-50px',marginBottom:'3px', backgroundColor:'#04619F', color:'white'}}><i><b>Fuel Delivery Report</b></i></h1>
-  
+          <h1 style={{ textAlign:'center',fontSize:"60px", backgroundColor:"#87ceeb", marginTop:'-50px'}}>Fuel   Distributed Details</h1>
+        
               
                 <br/><br/>
               <table style={{backgroundColor:"black"}}>
