@@ -286,7 +286,7 @@ useEffect(function effectFunction() {
                   
                       
               <button className="btn btn-secondary" type="submit" style={{ width:"150px", 
-                      marginLeft:"950px", backgroundColor:"#484846"}} onClick={(e)=>ChangeOnClick(e)} >
+                      marginLeft:"990px", backgroundColor:"#484846"}} onClick={(e)=>ChangeOnClick(e)} >
                       <i class="fa-solid fa-pen-to-square"></i>
                       &nbsp; UPDATE
               </button>

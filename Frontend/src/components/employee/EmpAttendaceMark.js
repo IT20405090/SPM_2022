@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 //import the image
 import Attendance from '../../img/Attendance.png'
 
+//import backgroud picture
+import BgEmp3 from '../../img/BgEmp3.jpeg';
+
 
 
 const EmpAttendaceMark = () => {
@@ -168,7 +171,7 @@ const EmpAttendaceMark = () => {
             </div>
 
 
-            <div style={{backgroundColor:'#d9d9d9', marginTop:'70px'}}>
+            <div style={{backgroundImage: `url(${BgEmp3})`,   backgroundSize: 'cover', marginTop:'70px'}}>
               <br/>
               
               <button className="btn btn-success" style={{marginLeft:'70px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
@@ -177,16 +180,16 @@ const EmpAttendaceMark = () => {
               <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
               </button>
 
-            <div style={{width:'800px', marginLeft:'350px',backgroundColor:'#8c9090'}}>
+            <div style={{width:'800px', marginLeft:'350px',background:"rgba(25,222,225,0.35)"}}>
 
             <img src={Attendance} style={{ width: "600px", marginLeft:'90px'}}></img>
 
               <br/>
-                <center><h2>FILL THE DETAILS</h2></center>
+                <center><h2 style={{color:"white",textShadow: '1px 2px 5px black'}}>FILL THE DETAILS</h2></center>
               <br/> 
               
                <form onSubmit={(e) => handleSubmit(e)} >
-                <table className='table' >
+                <table className='table'  style={{color:"white",textShadow: '1px 2px 5px black'}} >
 
                   <tr>
                   <td>
