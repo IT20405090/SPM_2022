@@ -1,11 +1,13 @@
-//import react
 import React, { Component } from 'react'
 //import axios
 import axios from 'axios'
-//import backgroud picture
-import BgEmp3 from '../../img/BgEmp3.jpeg';
 
-export default class ViewAllAttendance extends Component {
+//import backgroud picture
+import BgAdmin4 from '../../img/BgAdmin4.jpeg';
+
+export default class AdminCheckAttendance extends Component {
+
+
 
 //initialize constructor to pass the props
 constructor (props) {
@@ -57,7 +59,9 @@ filterData(GetAllAtt,searchKey){
   AttData.Emp_Name.toLowerCase().includes(searchKey) ||
   AttData.Emp_Name.includes(searchKey)||
   AttData.Date.includes(searchKey)||
-  AttData.Emp_ID.includes(searchKey)
+  AttData.Emp_ID.includes(searchKey)||
+  AttData.Month.toLowerCase().includes(searchKey)||
+  AttData.Month.includes(searchKey)
   )
 
 this.setState({GetAllAtt:result})
@@ -79,51 +83,70 @@ handleSearchArea=(e)=>{
 
 
 
-
-
   render() {
     return (
-
-            <div>
-
-
-                <div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
-                  <br/><br/>
-
-                  <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>ATTENDANCE LIST</h1>
-                  
-                  <div style={{height:'80px', backgroundColor:"#ff8347", marginTop:'-50px'}}></div>
-                  </div>
-                  <br/> <br/> <br/>
-
-                <div style={{backgroundImage: `url(${BgEmp3})`,   backgroundSize: 'cover'}}>
-                  <button className="btn btn-success" 
-                    style={{padding:'8px 8px',backgroundColor:'#3895d3', marginLeft:'50px', marginTop:'10px'}}>
-                    <a href="/dashboard" style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'16px'}}> 
-                    <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
-                  </button>
+        <div>
 
 
-                  <div className="col-lg-3 my-2 mb-2" style={{marginTop:'10px', marginLeft:'170px'}}>
-                
-                  <input
-                  className="form-control" style={{marginTop:'100px',padding:'10px 50px', width:'1150px'}}
-                  type="search"
-                  placeholder="Search Here..."
-                  name="searchQuery"
-                  onChange={this.handleSearchArea}>
-                  </input>
+        <div style={{height:'80px', backgroundColor:"#59bfff", marginTop:'-20px'}}>
+          <br/><br/>
+
+          <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>ATTENDANCE LIST- Admin</h1>
           
-                  <br></br>
-                  <p style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}> *Enter The Date/Shift/Name/ID You Want To Find</p>
-                  <p style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}> *Click On A Date To View More Details</p>
+          <div style={{height:'80px', backgroundColor:"#bfe6ff", marginTop:'-50px'}}></div>
+          </div>
+          <br/> <br/> <br/>
+
+          <div style={{backgroundImage: `url(${BgAdmin4})`,   backgroundSize: 'cover'}} >
+          <button className="btn btn-success" 
+            style={{padding:'8px 8px',backgroundColor:'#3895d3', marginLeft:'50px', marginTop:'20px'}}>
+            <a href="/AdminViewSalary" style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'16px'}}> 
+            <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
+          </button>
+
+
+          <div className="col-lg-3 my-2 mb-2" style={{marginTop:'10px', marginLeft:'170px'}}>
+        
+        <table className='serchclass'>
+          <tr>
+            <td>
+              <input
+              className="form-control" style={{marginTop:'100px',padding:'10px 50px', width:'350px'}}
+              type="search"
+              placeholder="Search Here..."
+              name="searchQuery"
+              onChange={this.handleSearchArea}>
+              </input>
+      
+              <br></br>
+              <p style={{color:"white",textShadow: '1px 2px 5px black'}}> *Enter The Shift/Name/ID You Want To Find</p>
+            </td>
+
+            <td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            </td>
+
+            <td>
+              <input
+              className="form-control" style={{marginTop:'100px',padding:'10px 50px', width:'350px'}}
+              type="search"
+              placeholder="Search Here..."
+              name="searchQuery"
+              onChange={this.handleSearchArea}>
+              </input>
+      
+              <br></br>
+              <p style={{color:"white",textShadow: '1px 2px 5px black'}}> *Enter The Month/Date You Want To Find</p>
+           </td>
+          </tr>
+          </table>
+          </div>
+          <br/>     
               
-                  </div>
 
-                 <br/>       
-                      
-
-              <table className="table table-hover" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
+          <table className="table table-hover" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
                   <thead>
                     <tr style={{fontSize:'20px'}}>
                         <th scope="col" style={{color:"white",textShadow: '1px 2px 5px black'}}>NO</th>
@@ -151,7 +174,7 @@ handleSearchArea=(e)=>{
                       <th scope='row' style={{color:"white",textShadow: '1px 2px 5px black'}}>{index+1}</th>
                         <td style={{color:"white",textShadow: '1px 2px 5px black'}}>{GetAllAtt.Emp_Name}</td>
                         <td style={{color:"white",textShadow: '1px 2px 5px black'}}>{GetAllAtt.Emp_ID}</td> 
-                        <td style={{textShadow: '1px 2px 5px black'}}><u><a  href={`EmpViewOneAttendance/${GetAllAtt._id}`} style={{textDecoration:'none', color:'white', }}>
+                        <td style={{textShadow: '1px 2px 5px black'}}><u><a  href={`AdminCheckAttOne/${GetAllAtt._id}`} style={{textDecoration:'none', color:'white', }}>
                             {GetAllAtt.Date}
                             </a></u>
                         </td> 
@@ -162,10 +185,6 @@ handleSearchArea=(e)=>{
 
                         
                         <td>
-                        <a className ="btn btn-warning" href={`/EmpAttendanceUpdate/${GetAllAtt._id}`}>
-                            <i className="fas fa-edit"></i>&nbsp;Edit
-                            </a>
-                            &nbsp;
                             <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(GetAllAtt._id)}>
                             <i className ="far fa-trash-alt"> </i>&nbsp;Delete
                             </a>  &nbsp;
@@ -181,14 +200,9 @@ handleSearchArea=(e)=>{
 
               </table>
               <br/>
-           </div>
-      </div>
+              </div>
 
-
-
-
-
-
+</div>
     )
   }
 }

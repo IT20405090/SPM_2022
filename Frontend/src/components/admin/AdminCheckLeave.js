@@ -10,6 +10,9 @@ import{useParams} from "react-router-dom";
 //import the image
 import AdminLeave from '../../img/AdminLeave.png'
 
+//import backgroud picture
+import BgAdmin6 from '../../img/BgAdmin6.webp';
+
 function AdminCheckLeave() {
 
   //track the states in function and set values with useState 
@@ -145,10 +148,10 @@ useEffect(function effectFunction() {
     <div>
 
         
-        <div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
+        <div style={{height:'80px', backgroundColor:"#59bfff", marginTop:'-20px'}}>
                   <br/><br/>
                   <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>MANAGE LEAVE -ADMIN </h1>
-                  <div style={{height:'80px', backgroundColor:"#ff8347", marginTop:'-50px'}}></div>
+                  <div style={{height:'80px', backgroundColor:"#bfe6ff", marginTop:'-50px'}}></div>
 
                   <button className="btn btn-success" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px'}}>
                   <a href="/AdminLeaveViewAll"
@@ -162,7 +165,7 @@ useEffect(function effectFunction() {
        
 
 
-       <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#f5f5f5", padding:'10px 20% 10px 20%' }}>
+       <div className='FORM2'style={{ marginTop: '40px',backgroundImage: `url(${BgAdmin6})`,   backgroundSize: 'cover', padding:'10px 20% 10px 20%' }}>
 
        <img src={AdminLeave} style={{ width: 700, marginTop: '10px', marginBottom: '10px', marginLeft: '70px', marginRight: '10px' }}></img>
                   <form >

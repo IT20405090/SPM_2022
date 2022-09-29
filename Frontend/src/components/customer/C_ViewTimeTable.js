@@ -16,7 +16,7 @@ export default class C_ViewTimeTable extends Component{
     }
     
     retrievePresentationPanels(){
-      axios.get("http://localhost:8000/TimeTables").then(res =>{
+      axios.get("http://localhost:5000/TimeTables").then(res =>{
         if(res.data.success){
           this.setState({
             timetable:res.data.existingTimeTables
@@ -28,14 +28,7 @@ export default class C_ViewTimeTable extends Component{
     }
     
     
-    onDelete = (id) =>{
-    
-      axios.delete(`http://localhost:8000/TimeTables/delete/${id}`).then((res)=>{
-          alert("Delete successfully");
-          this.retrievePresentationPanels();
-            
-      })
-    }
+   
 
     filterData(timetable,searchKey){
       const result = timetable.filter((timetable) =>
@@ -49,7 +42,7 @@ export default class C_ViewTimeTable extends Component{
     handleSearchArea = (e) =>{
       const searchKey = e.currentTarget.value;
     
-      axios.get("http://localhost:8000/TimeTables").then(res=>{
+      axios.get("http://localhost:5000/TimeTables").then(res=>{
         if(res.data.success){
           this.filterData(res.data.existingTimeTables,searchKey)
         }
@@ -96,7 +89,7 @@ export default class C_ViewTimeTable extends Component{
        
             <br/>
             <center>
-            <table className = "table table-bordered">
+            <table className = "table table-bordered" style={{backgroundColor:"black"}}>
                 <thead>
                     <tr>
                     <th style={{color:'white'}} scope = "col"></th>  

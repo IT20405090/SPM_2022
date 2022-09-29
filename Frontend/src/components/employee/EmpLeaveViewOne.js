@@ -6,6 +6,12 @@ import {useState, useEffect } from 'react'
 import axios from 'axios'
 //import useParams
 import {useParams} from 'react-router-dom';
+//import backgroud picture
+import BgEmp1 from '../../img/BgEmp1.jpeg';
+
+//import pdf generator
+import jsPdf from 'jspdf'
+import 'jspdf-autotable'
 
 
 
@@ -63,6 +69,23 @@ useEffect(function effectFunction() {
 },[]);
 
 
+//pdf generator function
+jsPdfGenarator = ()=>{
+  var doc = new jsPdf('p','pt');
+
+  doc.text(210,30,"Your Leave Form")
+  doc.autoTable({html:'#my-pdf'})
+
+  doc.autoTable({
+    columnStyles:{europe:{halign:'center'}},
+    margin:{top:10},
+  })
+
+
+doc.save("LeaveForm.pdf");
+
+
+}
 
 
   return (
@@ -83,20 +106,30 @@ useEffect(function effectFunction() {
 
             <br/>
 
-                <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#d9d9d9", padding:'10px 20% 10px 20%' }}>
-                  <form >
+                <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#d9d9d9", padding:'10px 20% 10px 20%',
+                backgroundImage: `url(${BgEmp1})`,   backgroundSize: 'cover' }}>
+                  <form style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}} >
 
-                            <div className='form-group'>
-                              <label style={{fontWeight:'700'}} >Submitted Date:</label> {Today}   
-                            </div>
+                           
 
-                        <table className='tableLeaveOne' style={{border:"1px solid black"}} >
+                        <table className='tableLeaveOne' style={{background:"rgba(80,80,80,0.45)"}} id="my-pdf">
                           <br/>
-
                           <tr>
+                          <div className='form-group'>
+                              <label >Submitted Date:</label> 
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                              &nbsp;
+                              {Today}   
+                            </div>
+                           
+                          </tr>
+                          <br/>
+                          <tr>
+                          
                           <td>
                             <div className='form-group'>
-                            <label style={{fontWeight:'700'}}>Employee Name: </label>
+                            <label>Employee Name: </label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             {Emp_Name} 
@@ -105,7 +138,7 @@ useEffect(function effectFunction() {
                           </td>
                           <td>
                             <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Employee ID: </label>
+                                <label >Employee ID: </label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {Emp_ID} 
                                 
@@ -116,7 +149,7 @@ useEffect(function effectFunction() {
                           <tr>
                           <td colspan="2">
                             <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Reason For The Leave: </label>
+                                <label >Reason For The Leave: </label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {Leave_Reason} 
                                 
@@ -127,7 +160,7 @@ useEffect(function effectFunction() {
                           <tr>
                           <td colspan="2">
                             <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Reason For "Other": </label>
+                                <label >Reason For "Other": </label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;
                                 {Leave_Reason_Other} 
@@ -140,7 +173,7 @@ useEffect(function effectFunction() {
                           <tr>
                           <td>
                             <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Leave From:</label>
+                                <label >Leave From:</label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {Leave_From} 
@@ -149,7 +182,7 @@ useEffect(function effectFunction() {
                           </td>
                           <td>
                             <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Leave To:</label>
+                                <label >Leave To:</label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {Leave_To} 
                               
@@ -161,8 +194,8 @@ useEffect(function effectFunction() {
                           <tr>
                           <td colspan="2">
                             <div>
-                              <p>---------------------------------------------------------------------------------------------------</p>
-                              <p style={{marginLeft:'750px'}}>*Manager Only</p>
+                              <p>------------------------------------------------------------------------------------------</p>
+                              <p style={{marginLeft:'750px'}}>*Managers Only</p>
                             </div>
                           </td>
                           </tr>
@@ -170,7 +203,7 @@ useEffect(function effectFunction() {
                           <tr>
                             <td>
                               <div className='form-group'>
-                                  <label style={{fontWeight:'700'}}>Approval:</label>
+                                  <label >Approval:</label>
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -183,7 +216,7 @@ useEffect(function effectFunction() {
                           <tr>
                             <td colspan="2">
                               <div className='form-group'>
-                                  <label style={{fontWeight:'700'}}>Comments:</label>
+                                  <label >Comments:</label>
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -197,13 +230,25 @@ useEffect(function effectFunction() {
                         
                         
                   </form>
-
-                  <button className="btn btn-success" style={{marginLeft:'370px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
-                  <a href="/EmpViewAllLeaves"
-                  style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
-                  <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
-                  </button>
-
+                  <br/>
+                <table>
+                  <tr>
+                  
+                    <td>
+                    <button className="btn btn-success" style={{marginLeft:'60px',padding:'7px 7px',backgroundColor:'#3895d3',width:'220px'}}>
+                    <a href="/EmpViewAllLeaves"
+                    style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
+                    <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
+                    </button>
+                    </td>
+                    <td>
+                    <button className="btn btn-success" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                    marginLeft:'380px', width:'220px'}} >
+                    <i class="fa-sharp fa-solid fa-file-arrow-down"></i> Download 
+                    </button> 
+                    </td>
+                  </tr>
+                </table>
                 <br/><br/><br/><br/><br/><br/>
               </div>
 

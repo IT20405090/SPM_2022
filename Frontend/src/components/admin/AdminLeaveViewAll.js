@@ -4,6 +4,9 @@ import React, { Component } from 'react'
 //import axios
 import axios from 'axios'
 
+//import backgroud picture
+import BgAdmin5 from '../../img/BgAdmin5.jpeg';
+
 export default class AdminViewAllLeaves extends Component {
 
     //initialize constructor to pass the props
@@ -78,14 +81,14 @@ filterData(GetAllLeavesEmp,searchKey){
       <div>
 
 
-      <div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
+      <div style={{height:'80px', backgroundColor:"#59bfff", marginTop:'-20px'}}>
         <br/><br/>
 
         <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>LEAVE FORMS LIST-ADMIN</h1>
         
-        <div style={{height:'80px', backgroundColor:"#ff8347", marginTop:'-50px'}}></div>
-        </div>
-        <br/> <br/> <br/><br/>
+        <div style={{height:'80px', backgroundColor:"#bfe6ff", marginTop:'-50px'}}></div>
+        <br/><br/>
+
 
         <button className="btn btn-success" 
           style={{marginLeft:'50px',padding:'8px 8px',backgroundColor:'#3895d3'}}>
@@ -93,71 +96,80 @@ filterData(GetAllLeavesEmp,searchKey){
           <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
         </button>
 
-        <div className="col-lg-3 my-2 mb-2" style={{marginTop:'10px',marginLeft:'170px' }}>
-      
-          <input
-          className="form-control" style={{marginTop:'100px',padding:'10px 50px', marginRight:'1150px'}}
-          type="search"
-          placeholder="Search Here..."
-          name="searchQuery"
-          onChange={this.handleSearchArea}>
-            </input>
-    
-        <br></br>
-        <p> *Enter Your Name Or The Date To Search</p>
-      
-      </div>
+        </div>
+        
+        
 
-      <br/>      
+        <div style={{marginTop:'64px',   backgroundImage: `url(${BgAdmin5})`,   backgroundSize: 'cover'}}>
+
+          <div className="col-lg-3 my-2 mb-2" style={{marginTop:'100px',marginLeft:'170px' }}>
+        <br/><br/><br/>
+            <input
+            className="form-control" style={{marginTop:'70px',padding:'10px 50px', marginRight:'1150px'}}
+            type="search"
+            placeholder="Search Here..."
+            name="searchQuery"
+            onChange={this.handleSearchArea}>
+              </input>
+      
+          <br></br>
+          <p> *Enter Your Name Or The Date To Search</p>
+        
+        </div>
+
+          <br/>      
+                  
+
+          <table className="table table-hover" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
+              <thead>
+                <tr style={{fontSize:'20px'}}>
+                    <th scope="col">NO</th>
+                    <th scope="col">Date Of Request</th>
+                    <th scope="col">Emp_Name</th>
+                    <th scope="col">Emp_ID</th>
+                    <th scope="col">Reason For The Leave</th>
+                    <th scope="col">Approval</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    
+
+                    
+                </tr>
+              </thead>
               
+              <tbody>
 
-      <table className="table table-hover" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
-          <thead>
-            <tr style={{fontSize:'20px'}}>
-                <th scope="col">NO</th>
-                <th scope="col">Date Of Request</th>
-                <th scope="col">Emp_Name</th>
-                <th scope="col">Emp_ID</th>
-                <th scope="col">Reason For The Leave</th>
-                <th scope="col">Approval</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                {this.state.GetAllLeavesEmp.map((GetAllLeaveReq,index)=>(
+                <tr key ={index}>
+                  <th scope='row'>{index+1}</th>
+                  <td>{GetAllLeaveReq.Today}</td>
+                  <td>{GetAllLeaveReq.Emp_Name}</td>
+                  <td>{GetAllLeaveReq.Emp_ID}</td> 
+                  <td>{GetAllLeaveReq.Leave_Reason}</td> 
+                  <td>{GetAllLeaveReq.Approval}</td>
+
+                  <td>
+                            <a className ="btn btn-warning" href={`/AdminCheckLeave/${GetAllLeaveReq._id}`}>
+                                <i className="fas fa-edit"></i>&nbsp;Edit
+                                </a>
+                                &nbsp;
+                                <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(GetAllLeaveReq._id)}>
+                                <i className ="far fa-trash-alt"> </i>&nbsp;Delete
+                                </a>  &nbsp;
+
+                            </td>
+                </tr>
+
                 
-
                 
-            </tr>
-          </thead>
-          
-          <tbody>
+                    ))} 
 
-            {this.state.GetAllLeavesEmp.map((GetAllLeaveReq,index)=>(
-            <tr key ={index}>
-              <th scope='row'>{index+1}</th>
-              <td>{GetAllLeaveReq.Today}</td>
-              <td>{GetAllLeaveReq.Emp_Name}</td>
-              <td>{GetAllLeaveReq.Emp_ID}</td> 
-              <td>{GetAllLeaveReq.Leave_Reason}</td> 
-              <td>{GetAllLeaveReq.Approval}</td>
+              </tbody>
 
-              <td>
-                        <a className ="btn btn-warning" href={`/AdminCheckLeave/${GetAllLeaveReq._id}`}>
-                            <i className="fas fa-edit"></i>&nbsp;Edit
-                            </a>
-                            &nbsp;
-                            <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(GetAllLeaveReq._id)}>
-                            <i className ="far fa-trash-alt"> </i>&nbsp;Delete
-                            </a>  &nbsp;
+          </table>
 
-                        </td>
-            </tr>
-
-            
-            
-                ))} 
-
-          </tbody>
-
-      </table>
+          <br/>
+      </div>
 
 </div>
     )

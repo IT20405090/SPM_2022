@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 //import the image
 import Attendance from '../../img/Attendance.png'
 
+//import backgroud picture
+import BgEmp3 from '../../img/BgEmp3.jpeg';
+
 
 
 const EmpAttendaceMark = () => {
@@ -19,6 +22,7 @@ const EmpAttendaceMark = () => {
     const [Shift, setShift]=useState("");
     const [Time_In, setTime_In]=useState("");
     const [Time_Out, setTime_Out]=useState("");
+    const [Month, setMonth]=useState("");
     // const [Total_Hours_per_Day,  setTotal_Hours_per_Day]=useState("");
     // const [Total_Hours_per_Month,setTotal_Hours_per_Month]=useState("");
 
@@ -53,6 +57,11 @@ const EmpAttendaceMark = () => {
       e.preventDefault();
       setDate(e.target.value)
     }
+   
+    const handle_Month_Change=(e)=>{
+      e.preventDefault();
+      setMonth(e.target.value)
+    }
 
     const handle_Shift_Change=(e)=>{
       e.preventDefault();
@@ -85,6 +94,7 @@ const EmpAttendaceMark = () => {
         setEmp_Name("");
         setEmp_ID("");
         setDate("");
+        setMonth("");
         setShift("");
         setTime_In("");
         setTime_Out("");
@@ -100,7 +110,7 @@ const EmpAttendaceMark = () => {
     const handleSubmit = async (e)=>{
       e.preventDefault();
 
-      if(Emp_Name===''|| Emp_ID===''||Date===''|| Shift===''|| Time_In===''||Time_Out===''){
+      if(Emp_Name===''|| Emp_ID===''||Date===''|| Shift===''|| Time_In===''||Time_Out===''||Month===''){
         alert("Fill All The Details!!")
 
       }else {
@@ -109,6 +119,7 @@ const EmpAttendaceMark = () => {
           Emp_Name:Emp_Name,
           Emp_ID:Emp_ID,
           Date:Date,
+          Month:Month,
           Shift:Shift,
           Time_In:Time_In,
           Time_Out:Time_Out,
@@ -122,6 +133,7 @@ const EmpAttendaceMark = () => {
           Emp_Name:Emp_Name,
           Emp_ID:Emp_ID,
           Date:Date,
+          Month:Month,
           Shift:Shift,
           Time_In:Time_In,
           Time_Out:Time_Out,
@@ -159,7 +171,7 @@ const EmpAttendaceMark = () => {
             </div>
 
 
-            <div style={{backgroundColor:'#d9d9d9', marginTop:'70px'}}>
+            <div style={{backgroundImage: `url(${BgEmp3})`,   backgroundSize: 'cover', marginTop:'70px'}}>
               <br/>
               
               <button className="btn btn-success" style={{marginLeft:'70px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
@@ -168,16 +180,48 @@ const EmpAttendaceMark = () => {
               <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
               </button>
 
-            <div style={{width:'800px', marginLeft:'350px',backgroundColor:'#8c9090'}}>
+            <div style={{width:'800px', marginLeft:'350px',background:"rgba(25,222,225,0.35)"}}>
 
             <img src={Attendance} style={{ width: "600px", marginLeft:'90px'}}></img>
 
               <br/>
-                <center><h2>FILL THE DETAILS</h2></center>
+                <center><h2 style={{color:"white",textShadow: '1px 2px 5px black'}}>FILL THE DETAILS</h2></center>
               <br/> 
               
                <form onSubmit={(e) => handleSubmit(e)} >
-                <table className='table' >
+                <table className='table'  style={{color:"white",textShadow: '1px 2px 5px black'}} >
+
+                  <tr>
+                  <td>
+                  <div className='form-group'>
+                            <label>Month :</label><br />
+                              <select
+                              id="Month" 
+                              className="form-control"
+                              name="Month"
+                              placeholder="Select The Month"
+                              value={Month}
+                              onChange={(e) => handle_Month_Change(e)} required='true'>
+                                      <option value=" ">Choose</option>
+                                      <option value="January">January</option>
+                                      <option value="February">February</option>
+                                      <option value="March">March</option>
+                                      <option value="April">April</option>
+                                      <option value="May">May</option>
+                                      <option value="June">June</option>
+                                      <option value="July">July</option>
+                                      <option value="August">August</option>
+                                      <option value="September">September</option>
+                                      <option value="October">October</option>
+                                      <option value="November">November</option>
+                                      <option value="December">December</option>
+                                          
+                              </select>
+                        </div>
+                    </td>
+                  </tr>
+
+
                   <tr>
                     <td>
                     <div className='form-group' >
@@ -267,28 +311,6 @@ const EmpAttendaceMark = () => {
                     </div>
                     </td>
                     </tr>
-
-                     {/* <div className='form-group'>
-                        <label>Total_Hours_per_Day</label><br />
-                          <input 
-                          type='text' 
-                          value={Total_Hours_per_Day} 
-                          className='form-control' 
-                          style={{ marginBottom: '20px' }} 
-                          onChange={(e) => handle_Total_Hours_per_Day_Change(e)} 
-                          required='true' />
-                    </div> 
-
-                     <div className='form-group'>
-                        <label>Total_Hours_per_Month</label><br />
-                          <input 
-                          type='text' 
-                          value={Total_Hours_per_Month}  
-                          className='form-control' 
-                          style={{ marginBottom: '20px' }} 
-                          onChange={(e) => handle_Total_Hours_per_Month_Change(e)} 
-                          required='true' />
-                    </div>  */}
 
                   </table>
                   <div>

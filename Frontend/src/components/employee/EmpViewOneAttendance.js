@@ -7,8 +7,9 @@ import axios from 'axios'
 //import useParams
 import {useParams} from 'react-router-dom';
 
-//import the image
-import AttView from '../../img/AttView.png'
+
+//import backgroud picture
+import BgEmp7 from '../../img/BgEmp7.jpeg';
 
 function ViewOneAttendance() {
 
@@ -16,6 +17,7 @@ function ViewOneAttendance() {
   const [Emp_Name, setEmp_Name]=useState("");
   const [Emp_ID, setEmp_ID]=useState("");
   const [Date, setDate]=useState("");
+  const [Month, setMonth]=useState("");
   const [Shift, setShift]=useState("");
   const [Time_In, setTime_In]=useState("");
   const [Time_Out, setTime_Out]=useState("");
@@ -30,6 +32,7 @@ function ViewOneAttendance() {
           Emp_Name:"",
           Emp_ID:"",
           Date:"",
+          Month:"",
           Shift:"",
           Time_In:"",
           Time_Out:"",
@@ -48,6 +51,7 @@ function ViewOneAttendance() {
       setEmp_Name(res.data.oneAttendance.Emp_Name)
       setEmp_ID(res.data.oneAttendance.Emp_ID)
       setDate(res.data.oneAttendance.Date)
+      setMonth(res.data.oneAttendance.Month)
       setShift(res.data.oneAttendance.Shift)
       setTime_In(res.data.oneAttendance.Time_In)
       setTime_Out(res.data.oneAttendance.Time_Out)
@@ -67,56 +71,80 @@ function ViewOneAttendance() {
             <div >
                 <div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
                     <br/><br/>
-                    <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>YOUR ATTENDANCE {Date}</h1>
+                    <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>YOUR ATTENDANCE FOR {Date} </h1>
+                    
                     <div style={{height:'80px', backgroundColor:"#ff8347", marginTop:'-50px'}}></div>
                 </div>
                     
                     
-                    <div style={{backgroundColor:'#d3d3d3'}}>
-                    <table className='tableEmpAttOne' style={{ width:'40%', height:'40%', marginLeft:'540px',marginTop:'70px',fontSize:'20px'}}>
-                      <tr colspan="2">
-                       <img src={AttView} style={{ width: "450px", marginLeft:"50px"}}></img>
-                       </tr>
-                     <tr>
-                      <th colspan="2"> <center>---Check The Details---</center> </th>
-                      </tr>
-                      <br/>
-                    <tr>
+                    <div style={{backgroundImage: `url(${BgEmp7})`,   backgroundSize: 'cover'}}>
+
+                    
+                      <p style={{ width:'50%', height:'50%', marginLeft:'515px',marginTop:'70px', fontWeight:'1000',color:"white",textShadow: '1px 2px 5px black', fontSize:'50px'}}>Check The Details</p>
+
+                      
+                      <button className="btn btn-success" style={{marginLeft:'50px', marginTop:'1px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
+                      <a href="/EmpViewAllAttendance"
+                      style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
+                      <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
+                      
+
+
+
+                    <table className='tableEmpAttOne' style={{ width:'35%', height:'40%', marginLeft:'480px',marginTop:'10px',fontSize:'20px',background:"rgba(80,80,80,0.45)"}}>
+                     
+                    <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
+                   
+                        <td > Attendance Date:</td> 
+                        <td>{Date}</td>
+                        
+                    </tr> 
+                    <br/>  
+                    <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
+                      
+                        <td> Month:</td> 
+                        <td>{Month}</td>
+
+                    </tr> 
+                    <br/>  
+                    <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
                       
                         <td> Employee Name:</td> 
                         <td>{Emp_Name}</td>
+
                     </tr> 
                     <br/>  
-                    <tr>
+                    <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
                         <td> Employee ID:</td> 
                         <td>{Emp_ID}</td>
+
                     </tr>  
                     <br/>       
-                    <tr>
+                    <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
                         <td> Shift:</td> 
                         <td>{Shift}</td>
+
                     </tr>  
                     <br/>  
-                    <tr>
+                    <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
                         <td> Time In:</td> 
                         <td>{Time_In}</td>
+
                     </tr> 
                     <br/>       
-                    <tr>
+                    <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
                         <td> Time Out:</td> 
                         <td>{Time_Out}</td>
+                        
                     </tr>   
                     
-                        {/* <th> {Total_Hours_per_Day}</th>
-                        <th> {Total_Hours_per_Month}</th> */}
+                       
                     <br/>
                        
                     </table>
                     <br/>
-                            <button className="btn btn-success" style={{marginLeft:'750px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
-                            <a href="/EmpViewAllAttendance"
-                            style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
-                            <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
+                    
+                            
                             <br/>     
                     </div>
                     

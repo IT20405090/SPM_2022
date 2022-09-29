@@ -7,6 +7,9 @@ import axios from 'axios'
 //import useNavigation to navigate to another page
 import { useNavigate } from 'react-router-dom';
 
+//import backgroud picture
+import BgEmp6 from '../../img/BgEmp6.jpeg';
+
 
 function LeaveFormCreate() {
 
@@ -159,12 +162,12 @@ function LeaveFormCreate() {
 
             <br/>
 
-            <div className='FORM2'style={{ marginTop: '40px', backgroundColor: "#d9d9d9", padding:'10px 20% 10px 20%' }}>
+            <div className='FORM2'style={{ marginTop: '40px',  backgroundImage: `url(${BgEmp6})`,   backgroundSize: 'cover', padding:'10px 20% 10px 20%' }}>
 
            
 
                 <form onSubmit={(e) => handleSubmit(e)}>
-                <div className='form-group'>
+                <div className='form-group' style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>
                         <label>Today</label><br />
                         <input 
                         type='date' 
@@ -175,7 +178,8 @@ function LeaveFormCreate() {
                         required='true' />
                     </div>
 
-                  <table className='tableLeave' style={{border:"1px solid black"}} >
+                  <table className='tableLeave' style={{fontSize:'18px', 
+                  color:"white",textShadow: '1px 2px 5px black',background:"rgba(180,80,80,0.45)"}} >
                   <br/>
 
                     <tr>
@@ -274,7 +278,7 @@ function LeaveFormCreate() {
                     <tr>
                     <td colspan="2">
                     <div>
-                      <p>--------------------------------------------------------------------------------------------------</p>
+                      <p>-------------------------------------------------------------------------------------------</p>
                       <p style={{marginLeft:'750px'}}>*Manager Only</p>
                     </div>
                     </td>
@@ -313,7 +317,7 @@ function LeaveFormCreate() {
                   <table>
                       <tr>
                         <td>
-                        <button type='submit' className='btn btn-success' style={{marginLeft:" 270px"}} > 
+                        <button type='submit' className='btn btn-success' style={{marginLeft:" 330px"}} > 
                         <i class="fa-solid fa-circle-check"></i>
                         &nbsp; SUBMIT</button>
                         </td>
