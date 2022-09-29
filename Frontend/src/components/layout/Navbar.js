@@ -53,11 +53,11 @@ const Navbar = () => {
 
 				{/*Employee pages*/}
 				<a style={{ display: userRole == "Employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpViewAllAttendance" aria-current="page">View Attendace</a>
-				<a style={{ display: userRole == "Employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Salary Information</a>
+				<a style={{ display: userRole == "Employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpViewSalary" aria-current="page">Salary Information</a>
 				<a style={{ display: userRole == "Employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpAttendaceMark" aria-current="page">Attendace Mark</a>
 				<a style={{ display: userRole == "Employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpLeaveFormCreate" aria-current="page">Leave Application</a>
 				<a style={{ display: userRole == "Employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/EmpViewAllLeaves" aria-current="page">View All Leaves</a>
-				<a style={{ display: userRole == "Employee" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="#" aria-current="page">Other</a>
+			
 
 
               </div>

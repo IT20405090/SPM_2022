@@ -170,9 +170,9 @@ doc.save("Attendance.pdf");
                     </table>
                     <br/>
        
-                    <button className="btn btn-success" onClick={this.jsPdfGenarator} style={{padding:'7px 7px', fontSize:'17px',
-                     marginLeft:'680px', width:'120px'}} >
-                      <i class="fa-sharp fa-solid fa-file-arrow-down"></i> PDF </button>  
+                    <button className="btn btn-success" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                     marginLeft:'630px', width:'220px'}} >
+                      <i class="fa-sharp fa-solid fa-file-arrow-down"></i> Donwload </button>  
 
                       <br/> 
 

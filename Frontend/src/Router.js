@@ -14,11 +14,20 @@ import Dashboard from "./components/Dashboard";
 //admin
 import ViewAllRoles from "./components/admin/ViewAllRoles";
 import UpdateUser from "./components/admin/UpdateUser";
-import AdminCheckLeave from "./components/admin/AdminCheckLeave";
-import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
 import AddFuel from "./components/admin/AddFuel";
 import ViewAllFuel from "./components/admin/ViewAllFuel";
 import EditFuel from "./components/admin/EditFuel";
+
+//Disni
+import AdminCheckLeave from "./components/admin/AdminCheckLeave";
+import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
+import AdminCreateSalary from "./components/admin/AdminCreateSalary";
+import AdminViewSalary from "./components/admin/AdminViewSalary";
+import ViewOneSalary from "./components/admin/ViewOneSalary";
+import AdminUpdateSalary from "./components/admin/AdminUpdateSalary";
+import AdminCheckAttendance from "./components/admin/AdminCheckAttendance";
+import AdminCheckAttOne from "./components/admin/AdminCheckAttOne";
+
 
 
 //Anodya
@@ -61,12 +70,8 @@ import EmpViewAllLeaves  from "./components/employee/EmpViewAllLeaves";
 import EmpLeaveEdit from "./components/employee/EmpLeaveEdit";
 import EmpLeaveViewOne from "./components/employee/EmpLeaveViewOne";
 
-import AdminCreateSalary from "./components/admin/AdminCreateSalary";
-import AdminViewSalary from "./components/admin/AdminViewSalary";
-import ViewOneSalary from "./components/admin/ViewOneSalary";
-import AdminUpdateSalary from "./components/admin/AdminUpdateSalary";
-import AdminCheckAttendance from "./components/admin/AdminCheckAttendance";
-import AdminCheckAttOne from "./components/admin/AdminCheckAttOne";
+import EmpViewSalary from "./components/employee/EmpViewSalary";
+import EmpViewOneSalary from "./components/employee/EmpViewOneSalary";
 
 
 
@@ -96,6 +101,9 @@ export default function Router() {
 						<Route path="/EmpViewAllLeaves" element={<EmpViewAllLeaves/>}/>
 						<Route path="/EmpLeaveEdit/:id" element={<EmpLeaveEdit/>}/>
 						<Route path="/EmpLeaveViewOne/:id" element={<EmpLeaveViewOne/>}/>
+
+						<Route path="/EmpViewSalary" element={<EmpViewSalary/>}/>
+						<Route path="/EmpViewOneSalary/:id" element={<EmpViewOneSalary/>}/>
 
 						
                    
