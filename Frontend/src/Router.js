@@ -37,6 +37,10 @@ import AdminCheckAttOne from "./components/admin/AdminCheckAttOne";
 import Addtimetable from './components/admin/Addtimetable';  
 import UpdateTimeTable from './components/admin/UpdateTimeTable';
 import ViewTimeTable from './components/admin/ViewTimeTable'; 
+
+import AddFuelReport from './components/admin/AddFuelReport';   
+import ViewFuelReport from './components/admin/ViewFuelReport';  
+import UpdateFuelReport from './components/admin/UpdateFuelReport'; 
    
 
  
@@ -126,12 +130,16 @@ export default function Router() {
 						<Route path="/AvailableFuel" element={<AvailableFuel/>}></Route>
 
 
-						<Route    path = "/Addtimetable" element = {<Addtimetable/>}/>   
-						<Route    path = "/ViewTimeTable" element = {<ViewTimeTable/>}/>   
+						<Route path = "/Addtimetable" element = {<Addtimetable/>}/>   
+						<Route path = "/ViewTimeTable" element = {<ViewTimeTable/>}/>   
 						<Route path = "/UpdateTimeTable/:id" element={<UpdateTimeTable/>}/>  
 						<Route path = "/ViewAllFuel" element={<ViewAllFuel/>}/>
 						<Route path="/:id" element={<EditFuel/>}/>
-					    
+
+						<Route path = "/AddFuelReport" element={<AddFuelReport/>}/>     
+						<Route path = "/ViewFuelReport" element={<ViewFuelReport/>}/>  
+						<Route path = "/UpdateFuelReport/:id" element={<UpdateFuelReport/>}/>  
+									
 					
                    
 
