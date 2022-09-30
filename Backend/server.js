@@ -15,6 +15,7 @@ const mongoose = require("mongoose");
 //ramona routes
 const user = require("./Routes/userRoutes");
 const fuel = require("./Routes/AddFuel");
+const stock = require("./Routes/Stock");
 
 //anodya routes
 const TimetableRoutes = require ('./Routes/TimetableRoutes');
@@ -54,6 +55,7 @@ app.use(EmpSalary);
 //ramona
 app.use("/user",user);
 app.use(fuel);
+app.use(stock);
 
 //anodya
 app.use(TimetableRoutes);

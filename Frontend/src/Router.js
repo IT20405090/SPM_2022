@@ -17,6 +17,8 @@ import UpdateUser from "./components/admin/UpdateUser";
 import AddFuel from "./components/admin/AddFuel";
 import ViewAllFuel from "./components/admin/ViewAllFuel";
 import EditFuel from "./components/admin/EditFuel";
+import Stock from "./components/admin/UpdateStock";
+import AvailableFuel from "./components/admin/AvailableFuel";
 
 //Disni
 import AdminCheckLeave from "./components/admin/AdminCheckLeave";
@@ -120,6 +122,9 @@ export default function Router() {
 						<Route path="/AdminUpdateSalary/:id" element={<AdminUpdateSalary/>}></Route>
 						<Route path="/AdminCheckAttendance" element={<AdminCheckAttendance/>}></Route>
 						<Route path="/AdminCheckAttOne/:id" element={<AdminCheckAttOne/>}></Route>
+						<Route path="/stock/:id" element={<Stock/>}></Route>
+						<Route path="/AvailableFuel" element={<AvailableFuel/>}></Route>
+
 
 						<Route    path = "/Addtimetable" element = {<Addtimetable/>}/>   
 						<Route    path = "/ViewTimeTable" element = {<ViewTimeTable/>}/>   
