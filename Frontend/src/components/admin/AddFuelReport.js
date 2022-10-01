@@ -5,7 +5,8 @@ import {useState,useEffecr} from 'react'
 import axios from 'axios'
 //import useNavigation to navigate to another page
 import { useNavigate } from 'react-router-dom';
-//import backgroundImage from '../../public/anodya5.jpg';  
+//import the background image
+import backgroundImage from '../../img/addbackground.jpg';   
 
 function AddFuelReport(){
 
@@ -226,30 +227,30 @@ function AddFuelReport(){
     return(
 
         
-      <div>
+      <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}>
       <div>
           
                     
      <div>
-              <div>
+          <div>
           <br/><br/>
         
           <center>
-          <h1 style={{marginTop:'-50px',marginBottom:'3px', backgroundColor:'#04619F', color:'white'}}><i><b>Fuel Delivery Report</b></i></h1>
-  
+          <h1 style={{ textAlign:'center',fontSize:"60px", backgroundColor:"#87ceeb", marginTop:'-50px'}}>Fuel   Distributed Details</h1>
+        
               
                 <br/><br/>
               <table style={{backgroundColor:"black"}}>
                 <tr>
                   <th>
                     <br/><br/>
-                <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
+                    <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
              
-                <br/>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>
+                    <br/>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>
                
                                <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label  className="form-label">Reference ID :</label>

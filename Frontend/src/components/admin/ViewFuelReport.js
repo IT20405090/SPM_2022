@@ -1,6 +1,11 @@
 import React, { Component } from  'react';
 import axios from 'axios';
-import backgroundImage from '../../img/anodya5.jpg';  
+//import the background image
+import backgroundImage from '../../img/back1234.jpg';  
+
+//import pdf generator
+import jsPdf from 'jspdf'
+import 'jspdf-autotable'
 
 
 
@@ -12,11 +17,30 @@ export default class ViewFuelReport extends Component{
         fuelreport: []
       };
     }
+
+    
+    //pdf generator function
+    jsPdfGenarator = ()=>{
+      var doc = new jsPdf('p','pt');
+
+      doc.text(210,30,"Monthly Report - Fuel distribution details")
+      doc.autoTable({html:'#pdf'})
+
+      doc.autoTable({
+        columnStyles:{europe:{halign:'center'}},
+        margin:{top:10},
+      })
+      doc.save("FuelDistributionD.pdf");
+
+
+    }
     
     componentDidMount(){
       this.retrieveFuelReport();
     }
+   
     
+    //retrive all the data in to the page from the database
     retrieveFuelReport(){
       axios.get("http://localhost:5000/FuelReport").then(res =>{
         if(res.data.success){
@@ -29,17 +53,16 @@ export default class ViewFuelReport extends Component{
       });
     }
     
-    
-    onDelete = (id) =>{
-    
-      axios.delete(`http://localhost:5000/FuelReport/delete/${id}`).then((res)=>{
-          alert("Delete successfully");
-          this.retrieveFuelReport();
-            
+    //delete function
+    onDelete = (id)=>{
+      axios.delete(`http://localhost:5000/FuelReport/Delete/${id}`).then((res)=>{
+      this.retrieveFuelReport();
       })
-    }
+      alert("Deleted succesfully");
+  } 
 
-    
+  //search function 
+  //search by fuel type  
     filterData(fuelreport,searchKey){
       const result = fuelreport.filter((fuelreport) =>
       fuelreport.FuelType.toLowerCase().includes(searchKey)
@@ -71,39 +94,49 @@ export default class ViewFuelReport extends Component{
     
    
                      
-         <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}>
-        <div>
+    <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}>
+    <div>
+      
+        <h1 style={{ textAlign:'center',fontSize:"60px"}}>Fuel   Distributed Details</h1>
+        
+        <div style={{height:'80px', backgroundColor:"#87ceeb", marginTop:'-80px'}}></div>
+      
         <br/>
             <div className="col-md-8 mt-4 mx-auto">
            
-            <center>       
-               <h1 style={{marginTop:'-50px',marginBottom:'3px', backgroundColor:'#04619F', color:'white'}}><b>Fuel Delivery Report</b></h1></center>
+                 
+              
             </div></div>
-            <br/>
+        
 
-        <hr/>
 
-        <button className="btn btn-outline-warning"><a href='/AddFuelReport'>Add New Data</a></button>
+        <br/>    <br/>    <br/>
+       
+
+
+        <button className="btn btn-warning" style={{ marginTop:'-100px',fontSize:'17px', width:'200px', height:'70px'}}><a href='/AddFuelReport'>Add New Data</a></button>
         <br/> <br/>
 
         <center>
-        <div className="col-lg-9 mt-2 mb-2">
+        <div className="col-lg-9 mt-2 mb-2" style={{marginLeft:'-770px'}}>
               <input
               className="form-control"
-              style={{marginLeft:'-200px'}}
+              style={{marginLeft:'-200px', width:'700px'}}
               type="search"
-           
               placeholder="search by fuel type"
               name="searchQuery"
               onChange={this.handleSearchArea}>
               </input>
             </div>
             </center>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
         
        
             <br/>
             <center>
-            <table className = "table table-bordered" style={{backgroundColor:"black"}}>
+            <table className = "table table-bordered" id="pdf" style={{marginLeft:'-80px', width:'1600px', backgroundColor:'black'}}>
                 <thead>
                     <tr>
                     <th style={{color:'white'}} scope = "col"></th>  
@@ -149,16 +182,16 @@ export default class ViewFuelReport extends Component{
                   <td>
     
                     <br/>
-                    <a className="btn btn-outline-warning" style = {{textDecoration:'none',color:'white'}}  href={`/UpdateFuelReport/${fuelreport._id}`}>
-                                &nbsp;Edit
-                                </a>
+                    
+                    <a className="btn btn-warning"  href={`/UpdateFuelReport/${fuelreport._id}`}>
+                    <i className="fas fa-edit"></i>&nbsp;Edit
+                    </a>
                               
-          
-                 
-                                &nbsp;
-                                <a className="btn btn-outline-warning" style = {{textDecoration:'none',color:'white'}}  href="/ViewFuelReport" onClick={()=> this.onDelete(fuelreport._id)}>
-                               &nbsp;Delete
-                                </a>
+                    &nbsp;  &nbsp;  
+                   
+                    <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(fuelreport._id)}>
+                    <i className ="far fa-trash-alt"> </i>&nbsp;Delete
+                    </a>
 
                   
                  
@@ -177,9 +210,16 @@ export default class ViewFuelReport extends Component{
 
         </center>
         <br/>
-    
+        <center>
+        <button className="btn btn-warning" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                             color:'blue', width:'300px', height:'70px'}} >
+                              <i class="fa-solid fa-download"></i>&nbsp;Generate Report as PDF
+        </button>
+        </center>
+        <br/>
 
-
+        <h5>Note : All the amounts are in Liters</h5>
+       
         </div>
          
 

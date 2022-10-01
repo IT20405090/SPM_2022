@@ -1,6 +1,9 @@
 import React, { Component } from  'react';
 import axios from 'axios';
-import backgroundImage from '../../img/anodya1.jpg';
+import backgroundImage from '../../img/back2.jpg';
+//import pdf generator
+import jsPdf from 'jspdf'
+import 'jspdf-autotable'
 
 export default class C_ViewTimeTable extends Component{
     constructor(props){
@@ -9,6 +12,26 @@ export default class C_ViewTimeTable extends Component{
       this.state= {
         timetable: []
       };
+    }
+
+    //pdf generator function
+      jsPdfGenarator = ()=>{
+      var doc = new jsPdf('p','pt');
+
+      doc.text(210,30,"Monthly time table - Fuel dilivery details")
+      doc.autoTable({html:'#pdf'})
+
+      doc.autoTable({
+        columnStyles:{europe:{halign:'center'}},
+        margin:{top:10},
+      })
+      doc.save("FuelDiliveryTimeTable.pdf");
+
+
+    }
+    
+    componentDidMount(){
+      this.retrieveFuelReport();
     }
     
     componentDidMount(){
@@ -66,7 +89,7 @@ export default class C_ViewTimeTable extends Component{
         <br/>
             <div className="col-md-8 mt-4 mx-auto">
            
-            <center>        <h1 style={{marginTop:'-50px',marginBottom:'3px', color:'white'}}>Fuel Delivery Time Table</h1></center>
+            <center>        <h1 style={{marginTop:'-50px',marginBottom:'3px', color:'white'}}>This Month Fuel Delivery Time Table</h1></center>
             </div></div>
             <br/>
 
@@ -89,7 +112,7 @@ export default class C_ViewTimeTable extends Component{
        
             <br/>
             <center>
-            <table className = "table table-bordered" style={{backgroundColor:"black"}}>
+            <table className = "table table-bordered" id="pdf" style={{backgroundColor:"black"}}>
                 <thead>
                     <tr>
                     <th style={{color:'white'}} scope = "col"></th>  
@@ -137,9 +160,14 @@ export default class C_ViewTimeTable extends Component{
         </table>
 
         </center>
-        <br/>
-       
-
+        <br/> <br/> <br/> <br/>
+        <center>
+        <button className="btn btn-warning" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                               color:'blue', width:'500px', height:'70px'}}>
+                              <i class="fa-solid fa-download"></i>&nbsp;Download as PDF
+        </button>
+        </center>
+        <br/> <br/>
         </div>
          
 
