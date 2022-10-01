@@ -7,6 +7,8 @@ import axios from 'axios';
 //import useParams (use to access the matching data)
 import{useParams} from "react-router-dom";
 
+//import backgroud picture
+import BgAdmin2 from '../../img/pic.webp';
 
 
 function Update() {
@@ -121,22 +123,26 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
 
 <div className='FORM2'>
 
-        <div style={{height:'80px', backgroundColor:"#59bfff", marginTop:'-20px'}}>
+        <div style={{height:'80px', backgroundColor:"#C5CAE9", marginTop:'-20px'}}>
         <br/><br/>
         <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>Fuel Availability</h1>
-        <div style={{height:'80px', backgroundColor:"#bfe6ff", marginTop:'-50px'}}></div>
+        <div style={{height:'80px', backgroundColor:"#7986CB", marginTop:'-50px'}}></div>
 
-        </div>           
+        </div> 
+        <div style={{ marginTop: '54px',  backgroundImage: `url(${BgAdmin2})`,   backgroundSize: 'cover'}}>            
         <br/>
 
            <form style={{ marginTop: '70px',   backgroundSize: 'cover'}}>
 
 
             <br/>
-             <table className='tableSalary' style={{width:"1400px", marginLeft:"150px", marginTop:'50px', background:"rgba(100,100,120,0.45)"}} >
-             <br/>
-               <tr style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>
+             <table className='tableSalary' style={{width:"1400px", marginLeft:"150px", marginTop:'50px', background:"rgba(100,80,120,0.45)"}} >
+            
+             
+               <tr style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black', marginLeft:'50px'}}>
+                <center>
                        <td>
+                        &nbsp;
                        <div className='form-group'>
                            <label>&nbsp;<h3>Date:</h3></label><br />
                            <input 
@@ -148,21 +154,26 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
                             />
                        </div>
                        </td>
+                  </center>
                </tr>
-               <tr style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>
-               <td >
+               <center>
+               <div className='row'>
+               <div className='col'>
+               <td style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black', marginLeft:'50px'}}>
                <div className='form-group'>
                    <label>&nbsp;<h3>Petrol 92 Octane :</h3></label><br />
                    <input 
                    type='text' 
                    value={p92} 
                    className='form-control' 
-                   style={{ marginBottom: '20px',color:"black" }} 
+                   style={{ marginBottom: '20px'}} 
                    onChange={e => setp92(e.target.value)} 
                     />
                </div>
                </td>
-               <td >
+               </div>
+               <div className='col'>
+               <td style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black', marginLeft:'50px'}}>
                <div className='form-group'>
                    <label>&nbsp;<h3>Petrol 95 Octane : </h3></label><br />
                    <input type='text'
@@ -173,7 +184,12 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
                      />
                </div>
                </td>
-               <td >
+               </div>
+               <tr/>
+               </div>
+               <div className='row'>
+               <div className='col'>
+               <td style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black', marginLeft:'50px'}} >
                <div className='form-group'>
                    <label>&nbsp;<h3>Super Diesel : </h3></label><br />
                    <input type='text'
@@ -184,9 +200,9 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
                      />
                </div>
                </td>
-              
-
-               <td >
+              </div>
+              <div className='col'>
+               <td style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black', marginLeft:'50px'}}>
                <div className='form-group'>
                    <label>&nbsp;<h3>Auto Diesel : </h3></label><br />
                    <input type='text'
@@ -197,9 +213,9 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
                      />
                </div>
                </td>
-               </tr>
-    
-        
+               </div>
+               </div>
+               </center>
               
               <br/><br/>
              </table> 
@@ -231,7 +247,7 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
 
 
 
-
+</div>
 
     </div>
   )

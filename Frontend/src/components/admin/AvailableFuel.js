@@ -4,6 +4,9 @@ import React, { Component } from 'react'
 //import axios
 import axios from 'axios'
 
+//import backgroud picture
+import BgAdmin2 from '../../img/backpic.jpg';
+
 
 export default class AdminViewAllStock extends Component {
 
@@ -49,23 +52,26 @@ export default class AdminViewAllStock extends Component {
       <div>
 
 
-      <div style={{height:'80px', backgroundColor:"#00bfff", marginTop:'-20px'}}>
+      <div style={{height:'80px', backgroundColor:"#90A4AE", marginTop:'-20px'}}>
         <br/><br/>
 
-        <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>Fuel Availability</h1>
+        <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>Fuel Information</h1>
         
-        <div style={{height:'80px', backgroundColor:"#87ceeb", marginTop:'-50px'}}></div>
+        <div style={{height:'80px', backgroundColor:"#CFD8DC", marginTop:'-50px'}}></div>
         </div>
-        <br/> <br/> <br/><br/>
+        <div style={{ marginTop: '54px',  backgroundImage: `url(${BgAdmin2})`,   backgroundSize: 'cover'}}>  
+        <br/>
 
 
-      <br/>      
-              
+      
+           
 <div id="content">
-      <table className="table table-hover"  style={{marginTop:'50px',  marginLeft:'200px', width:'1300px'}}>
-          <thead>
-            <tr style={{fontSize:'20px'}}>
-                <th scope="col"><h3>Petrol</h3></th>
+<table className='tableSalary' style={{width:"1000px", marginLeft:"100px", marginTop:'50px', background:"rgba(90,90,120,0.45)"}} >
+  
+      <table className="table table-borderless"  style={{marginTop:'50px',  marginLeft:'50px', width:'1200px',color:'white'}}>
+          <thead style={{fontSize:'20px',color:'white'}}>
+            <tr style={{fontSize:'20px', color:'white'}}>
+                <th scope="col"><h2>Petrol</h2></th>
 
                 
             </tr>
@@ -78,8 +84,8 @@ export default class AdminViewAllStock extends Component {
               {/* <th scope='row'>{index+1}</th> */}
               
               
-              <td><h4>Octane 92 -   {GetAllStock.p92} l</h4></td>
-              <td><h4>Ocatne 95 -   {GetAllStock.p95} l</h4></td>
+              <td style={{fontSize:'40px',color:'white'}}><h4>Octane 92 -   {GetAllStock.p92} l</h4></td>
+              <td style={{fontSize:'40px',color:'white'}}><h4>Octane 95 -   {GetAllStock.p95} l</h4></td>
 
               <br/>
                       
@@ -96,10 +102,10 @@ export default class AdminViewAllStock extends Component {
 
       </table>
 
-      <table className="table table-hover"  style={{marginTop:'50px',  marginLeft:'200px', width:'1300px'}}>
-          <thead>
-            <tr style={{fontSize:'20px'}}>
-                <th scope="col"><h3>Diesel</h3></th>
+      <table className="table table-borderless"  style={{marginTop:'50px',  marginLeft:'50px', width:'1200px',color:'white'}}>
+          <thead style={{fontSize:'40px',color:'white'}}>
+            <tr style={{fontSize:'40px',color:'white'}}>
+                <th scope="col"><h2>Diesel</h2></th>
                 
                 
             </tr>
@@ -112,8 +118,8 @@ export default class AdminViewAllStock extends Component {
               {/* <th scope='row'>{index+1}</th> */}
               
               
-              <td><h4>Super Diesel -  {GetAllStock.superd} l</h4></td>
-              <td><h4>Auto Diesel -   {GetAllStock.autod} l</h4></td> 
+              <td style={{fontSize:'20px',color:'white'}}><h4>Super Diesel -  {GetAllStock.superd} l</h4></td>
+              <td style={{fontSize:'20px',color:'white', marginLeft:'-100px'}}><h4>Auto Diesel -   {GetAllStock.autod} l</h4></td> 
               
                            
             </tr>
@@ -129,7 +135,7 @@ export default class AdminViewAllStock extends Component {
 
       </table>
 
-      <table style={{marginTop:'50px',  marginLeft:'200px', width:'1300px'}}>
+      <table style={{marginTop:'50px',  marginLeft:'200px', width:'1300px',color:'white'}}>
           <thead>
             <tr style={{fontSize:'20px'}}>
                 <th scope="col"><h3>Modified Date</h3></th>
@@ -150,7 +156,8 @@ export default class AdminViewAllStock extends Component {
                         <a className ="btn btn-warning" href={`/stock/${GetAllStock._id}`}>
                             <i className="fas fa-edit"></i>&nbsp;<h4>Update Stock</h4>
                             </a>
-                            &nbsp;
+                          
+                            <br/>
                            
             </tr>
 
@@ -161,13 +168,14 @@ export default class AdminViewAllStock extends Component {
                     
           </tbody>
                     
-
+<br/>
 
       </table>
-
+</table>
      
       </div>
       <br/><br/><br/><br/>
+</div>
 </div>
 
     )
