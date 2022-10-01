@@ -234,6 +234,12 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
                       <i class="fa-solid fa-pen-to-square"></i>
                       &nbsp; <h4>UPDATE</h4>
                       </button>
+
+                      <button className="btn btn-success" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px'}}>
+                      <a href="/AvailableFuel"
+                      style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
+                      <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
+                      </button>
                       </center>
                   </tr>
                   <br/><br/><br/><br/><br/>

@@ -81,7 +81,7 @@ const Login = () => {
 				Don't have an account? <Link to="/register">Sign Up</Link>
 			</p>
 			</center>
-			<br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/>
 		</div>
 	);
 };

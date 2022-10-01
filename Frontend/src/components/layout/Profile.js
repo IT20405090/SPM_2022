@@ -14,6 +14,9 @@ import Swal from "sweetalert2";
 import moment from "moment";
 import profile from '../../img/user.png'
 
+//import backgroud picture
+import BgAdmin6 from '../../img/background.jpg';
+
 const Profile = () => {
   const navigate = useNavigate();
   const [updateChange, setUpdaetChange] = useState(false);
@@ -115,10 +118,11 @@ const Profile = () => {
   };
 
   return (
+    <div style={{ marginTop: '0px',backgroundImage: `url(${BgAdmin6})`,   backgroundSize: 'cover', padding:'10px 20% 10px 20%' }}>
     <div style={{ marginTop: "70px", marginBottom: "70px" }} >
       <div>
         <center>
-        <Card class="p-3 mb-2 bg-secondary text-white" style={{ marginLeft: "200px", marginRight: "200px" }}>
+        <Card class="p-3 mb-2 bg-secondary text-white" style={{ marginLeft: "100px", marginRight: "100px" }}>
           <CardHeader>
             <CardTitle style={{ color: "purple", fontSize: "30px" }}>
               My Profile
@@ -187,6 +191,7 @@ const Profile = () => {
         </Card>
         </center>
       </div>
+    </div>
     </div>
   );
 };

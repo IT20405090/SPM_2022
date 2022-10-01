@@ -8,7 +8,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 //import backgroud picture
-import BgAdmin6 from '../../img/background.webp';
+import BgAdmin6 from '../../img/backback.jpg';
 
 import grp from '../../img/fuel.jpg'; 
 
@@ -124,11 +124,11 @@ function AddFuel() {
       <div>
 
 
-            <div style={{height:'80px', backgroundColor:"#bfe6ff", marginTop:'-20px'}}>
+            <div style={{height:'80px', backgroundColor:"#CFD8DC", marginTop:'-20px'}}>
                 
                 <br/><br/>
                 <h1 style={{color:'black', textAlign:'center',fontSize:"60px"}}>Add Fuel Details</h1>
-                <div style={{height:'80px', backgroundColor:"#00bfff", marginTop:'-50px', marginBottom:'5px'}}></div>
+                <div style={{height:'80px', backgroundColor:"#607D8B", marginTop:'-50px', marginBottom:'5px'}}></div>
 
 
             </div>
@@ -137,12 +137,12 @@ function AddFuel() {
 
             <div className='FORM2'style={{ marginTop: '40px',backgroundImage: `url(${BgAdmin6})`,   backgroundSize: 'cover', padding:'10px 20% 10px 20%' }}>
 
-            <br/>
+            
 
             <form onSubmit={(e) => handleSubmit(e)}>
                 
 
-                  <table className='tableLeave' style={{border:"1px solid black", backgroundColor: "white"}} >
+                  <table className='tableSalary' style={{width:"1000px", marginLeft:"0px", marginTop:'50px', background:"rgba(90,90,120,0.45)"}}  >
                   
 
                     <tr>
@@ -211,7 +211,7 @@ function AddFuel() {
                             value={price} 
                             placeholder="Price In Rupees"
                             className='form-control' 
-                            style={{ marginBottom: '20px', marginLeft:'10px' , marginRight:'20px'}}
+                            style={{ marginBottom: '10px', marginLeft:'5px' , marginRight:'20px'}}
                             onChange={(e) => Handleprice(e)} 
                             required='true' />
                         </div>
@@ -239,7 +239,7 @@ function AddFuel() {
 
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         
-                        <div><img src={grp} class="img-fluid" alt="" width="600" height="800" marginLeft="100px" /></div>
+                       
                         
                         </td>
                         </tr>
@@ -267,7 +267,7 @@ function AddFuel() {
                       <br/><br/>
                   </table> 
 
-                 
+                 <br/>
                   
             </form>
       </div>
