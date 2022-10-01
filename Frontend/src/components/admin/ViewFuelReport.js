@@ -1,7 +1,7 @@
 import React, { Component } from  'react';
 import axios from 'axios';
 //import the background image
-//import backgroundImage from '../../img/anodya5.jpg';  
+import backgroundImage from '../../img/back1234.jpg';  
 
 //import pdf generator
 import jsPdf from 'jspdf'
@@ -94,9 +94,8 @@ export default class ViewFuelReport extends Component{
     
    
                      
-         <div>
-
-        <div>
+    <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}>
+    <div>
       
         <h1 style={{ textAlign:'center',fontSize:"60px"}}>Fuel   Distributed Details</h1>
         
@@ -115,7 +114,7 @@ export default class ViewFuelReport extends Component{
        
 
 
-        <button className="btn btn-outline-warning" style={{ marginTop:'-100px',fontSize:'17px', width:'200px', height:'70px'}}><a href='/AddFuelReport'>Add New Data</a></button>
+        <button className="btn btn-warning" style={{ marginTop:'-100px',fontSize:'17px', width:'200px', height:'70px'}}><a href='/AddFuelReport'>Add New Data</a></button>
         <br/> <br/>
 
         <center>
@@ -132,10 +131,7 @@ export default class ViewFuelReport extends Component{
             </center>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-outline-warning" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
-                              marginLeft:'1400px', color:'blue', width:'200px', height:'70px', marginTop:'-300px'}} >
-                              <i class="fa-solid fa-download"></i>&nbsp;Generate Report
-            </button>
+         
         
        
             <br/>
@@ -214,7 +210,13 @@ export default class ViewFuelReport extends Component{
 
         </center>
         <br/>
-    
+        <center>
+        <button className="btn btn-warning" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                             color:'blue', width:'300px', height:'70px'}} >
+                              <i class="fa-solid fa-download"></i>&nbsp;Generate Report as PDF
+        </button>
+        </center>
+        <br/>
 
         <h5>Note : All the amounts are in Liters</h5>
        

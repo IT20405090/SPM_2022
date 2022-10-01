@@ -2,6 +2,8 @@ import React  from 'react';
 import {useState ,useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom"; 
+//import the background image
+import backgroundImage from '../../img/addbackground.jpg';   
 
 function UpdateFuelReport(){
 
@@ -169,31 +171,32 @@ useEffect(function effectFunction() {
 
     return (
 
-        <div> 
+                
+      <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}> 
        
             
                       
-       <div>
-                <div>
-            <br/><br/>
+      <div>
+        <div>
+        <br/><br/>
           
             <center>
             <h1 style={{ textAlign:'center',fontSize:"60px", backgroundColor:"#87ceeb", marginTop:'-50px'}}>Fuel   Distributed Details - Update</h1>
         
                 
                   <br/><br/>
-                <table style={{backgroundColor:"black"}}>
+                  <table style={{backgroundColor:"black"}}>
                   <tr>
                     <th>
                       <br/><br/>
-                  <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
+                         <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
                
-                  <br/>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>
-                 
+                          <br/>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>
+                        
                                  <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                   <label  className="form-label">Reference ID :</label>
                                   <input type="text" className="form-control"

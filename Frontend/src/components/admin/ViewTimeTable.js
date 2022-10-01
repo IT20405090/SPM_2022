@@ -1,6 +1,6 @@
 import React, { Component } from  'react';
 import axios from 'axios';
-import backgroundImage from '../../img/anodya1.jpg';
+import backgroundImage from '../../img/anodya2.jpg';
 
 export default class ViewTimeTable extends Component{
     constructor(props){
@@ -68,17 +68,16 @@ export default class ViewTimeTable extends Component{
     
    
                      
-         <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}>
+        <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}>
         <div>
-        <br/>
-            <div className="col-md-8 mt-4 mx-auto">
-           
-            <center>        <h1 style={{marginTop:'-50px',marginBottom:'3px', backgroundColor:'#04619F', color:'white'}}>Fuel Delivery Time Table</h1></center>
-            </div></div>
-            <br/>
+    
+        <h1 style={{ textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-03px'}}>Fuel Distributed TimeTable</h1>
+          
+        </div>
+        <br/> <br/> <br/>
+            
 
-        <hr/>
-        <button className="btn btn-outline-warning"><a href='/Addtimetable'>Add New Time Table</a></button>
+        <button className="btn btn-outline-warning" style={{marginTop:'-100px',fontSize:'17px', width:'200px', height:'70px'}}><a href='/Addtimetable'>Add New Time Table</a></button>
         <br/>
         <center>
         <div className="col-lg-9 mt-2 mb-2">
