@@ -10,18 +10,20 @@ const bodyParser = require("body-parser");
 //import mongoose
 const mongoose = require("mongoose");
 
-
-//import Routes 
+//import Routes
 const user = require("./Routes/userRoutes");
 
 //anodya routes
-const TimetableRoutes = require ('./Routes/TimetableRoutes');
+const TimetableRoutes = require("./Routes/TimetableRoutes");
 
 //Disni Routes
-const EmpAttendace= require('./Routes/EmpAttendace')
-const EmpLeaveForm=require('./Routes/EmpLeaveForm')
+const EmpAttendace = require("./Routes/EmpAttendace");
+const EmpLeaveForm = require("./Routes/EmpLeaveForm");
 
-//invoke app 
+//sandeepa
+const appointmentRouter = require("./Routes/sumbittedAppointments.js");
+
+//invoke app
 const app = express();
 
 //declare the port to run the backend
@@ -30,7 +32,7 @@ const PORT = process.env.PORT || 5000;
 //middlewares
 app.use(
   cors({
-    origin: "*", 
+    origin: "*",
   })
 );
 
@@ -40,22 +42,23 @@ app.use(bodyParser.json());
 const dotenv = require("dotenv");
 dotenv.config();
 
-
-//use server to communicate with routes
+//use server to communicate with routess
 //disni
 app.use(EmpAttendace);
 app.use(EmpLeaveForm);
 
 //ramona
-app.use("/user",user);
+app.use("/user", user);
 
 //anodya
 app.use(TimetableRoutes);
 
+//sandeepa
+app.use(appointmentRouter);
 
 //connect the app with mongo db with mongoose
-mongoose.connect(
-  process.env.DB_URL, {
+mongoose
+  .connect(process.env.DB_URL, {
     //type warnings
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -70,6 +73,3 @@ mongoose.connect(
 app.listen(PORT, () => {
   console.log(`Backend App is running on ${PORT}`);
 });
-
-
-
