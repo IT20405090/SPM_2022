@@ -3,7 +3,7 @@ import axios from "axios";
 import jsPdf from "jspdf";
 import "jspdf-autotable";
 
-// Generate report - all users
+// Generate report - all Appointments
 export default class UserList extends Component {
   constructor(props) {
     super(props);
