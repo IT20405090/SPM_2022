@@ -5,8 +5,8 @@ import {useState,useEffecr} from 'react'
 import axios from 'axios'
 //import useNavigation to navigate to another page
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from '../../img/anodya5.jpg';  
-import tab123 from "../../img/back.jpg"; 
+import backgroundImage from '../../img/backpic.jpg';  
+
 
 
 function Addtimetable() {
@@ -183,11 +183,13 @@ function Addtimetable() {
         <br/><br/>
       
         <center>
-        <h1 style={{marginTop:'-50px',marginBottom:'3px', backgroundColor:'#04619F', color:'white'}}><i><b>Fuel Delivery Time Table</b></i></h1>
+        <h1 style={{ textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-50px'}}>Fuel   Distributed Details</h1>
+        
+       
 
             
               <br/><br/>
-            <table   style={{backgroundImage :`url(${tab123})`, marginTop:'-30px'}}>
+            <table   style={{backgroundColor :'black', marginTop:'-30px'}}>
               <tr>
                 <th>
                   <br/><br/>
@@ -422,10 +424,10 @@ function Addtimetable() {
                             
    
          
-                        <button className= "btn btn-outline-primary" style={{marginRight:'0px', marginLeft:'-730px', blockSize:'50px'}} type="submit" onClick={handleSubmit}>
+                        <button className= "btn btn-primary" style={{marginRight:'0px', marginLeft:'-100px', blockSize:'70px', width:'200px'}} type="submit" onClick={handleSubmit}>
                          Send Details </button>  
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         <button className="btn btn-outline-primary" style={{blockSize:'50px'}}><a href = "/ViewTimeTable" >VIEW</a></button>
+                         <button className="btn btn-warning" style={{blockSize:'70px', width:'200px'}}><a href = "/ViewTimeTable" >VIEW</a></button>
             </center>
             
             </div>

@@ -48,6 +48,7 @@ const Navbar = () => {
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/AdminLeaveViewAll" aria-current="page">View Leaves</a>
 				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" href="/ViewAllRoles" aria-current="page">View Roles</a>	
 			    <a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" aria-current="page" href="/staffRegister">Register Employee</a>
+				<a style={{ display: userRole == "Admin" ? "flex" : "none" , textDecoration:"none"}} className="sidebarListItem" aria-current="page" href="/ViewFuelReport">Reports</a>
 
 
 

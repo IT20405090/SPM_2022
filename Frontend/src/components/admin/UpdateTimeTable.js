@@ -2,7 +2,7 @@ import React  from 'react';
 import {useState ,useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-import backgroundImage from '../../img/anodya1.jpg';
+import backgroundImage from '../../img/backpic.jpg';
 
 function UpdateTimeTable() {
 
@@ -141,12 +141,12 @@ useEffect(function effectFunction() {
           
                   
           <div style={{ backgroundImage: `url(${backgroundImage})`,   backgroundSize: 'cover'}}>
-      <div>
-        <br/><br/>
-        <center>
-        <center>
-        <h1 style={{marginTop:'-50px',marginBottom:'3px', backgroundColor:'#04619F', color:'white'}}>Fuel Delivery Time Table -Update</h1>
-        </center>
+          <div>
+          <br/><br/>
+          <center>
+          <center>
+          <h1 style={{textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-50px'}}>Fuel Delivery Time Table -Update</h1>
+          </center>
         <table  width = "350" height = "600">
             <tr>
                 <th>
@@ -302,10 +302,10 @@ useEffect(function effectFunction() {
           
           
                            
-                        <button className="btn btn-outline-primary" type="submit" onClick={(e)=>ChangeOnClick(e)}>
+                        <button className="btn btn-primary" type="submit" onClick={(e)=>ChangeOnClick(e)}>
                         UPDARE </button>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                        <button className="btn btn-outline-primary"><a href = "/ViewTimeTable" >VIEW</a></button>
+                        <button className="btn btn-warning"><a href = "/ViewTimeTable" >VIEW</a></button>
                         &nbsp;
                         <br/>
                             
