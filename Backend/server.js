@@ -10,23 +10,25 @@ const bodyParser = require("body-parser");
 //import mongoose
 const mongoose = require("mongoose");
 
-
-//import Routes 
+//import Routes
 //ramona routes
 const user = require("./Routes/userRoutes");
 const fuel = require("./Routes/AddFuel");
 const stock = require("./Routes/Stock");
 
 //anodya routes
-const TimetableRoutes = require ('./Routes/TimetableRoutes');
-const FuelReportRoutes = require ('./Routes/FuelReportRoutes');
+const TimetableRoutes = require("./Routes/TimetableRoutes");
+const FuelReportRoutes = require("./Routes/FuelReportRoutes");
 
 //Disni Routes
-const EmpAttendace= require('./Routes/EmpAttendace')
-const EmpLeaveForm=require('./Routes/EmpLeaveForm')
-const EmpSalary =require('./Routes/EmpSalary')
+const EmpAttendace = require("./Routes/EmpAttendace");
+const EmpLeaveForm = require("./Routes/EmpLeaveForm");
+const EmpSalary = require("./Routes/EmpSalary");
 
-//invoke app 
+//sandeepa Routes
+const submittedAppointment = require("./Routes/sumbittedAppointments");
+
+//invoke app
 const app = express();
 
 //declare the port to run the backend
@@ -35,7 +37,7 @@ const PORT = process.env.PORT || 5000;
 //middlewares
 app.use(
   cors({
-    origin: "*", 
+    origin: "*",
   })
 );
 
@@ -45,7 +47,6 @@ app.use(bodyParser.json());
 const dotenv = require("dotenv");
 dotenv.config();
 
-
 //use server to communicate with routes
 //disni
 app.use(EmpAttendace);
@@ -53,7 +54,7 @@ app.use(EmpLeaveForm);
 app.use(EmpSalary);
 
 //ramona
-app.use("/user",user);
+app.use("/user", user);
 app.use(fuel);
 app.use(stock);
 
@@ -61,11 +62,12 @@ app.use(stock);
 app.use(TimetableRoutes);
 app.use(FuelReportRoutes);
 
-
+//sandeepa
+app.use(submittedAppointment);
 
 //connect the app with mongo db with mongoose
-mongoose.connect(
-  process.env.DB_URL, {
+mongoose
+  .connect(process.env.DB_URL, {
     //type warnings
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -80,6 +82,3 @@ mongoose.connect(
 app.listen(PORT, () => {
   console.log(`Backend App is running on ${PORT}`);
 });
-
-
-
