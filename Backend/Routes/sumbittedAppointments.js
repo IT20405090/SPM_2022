@@ -18,6 +18,7 @@ router.post("/SubmitAppointment/Save", (req, res) => {
     }
     return res.status(200).json({
       success: "Appointment added successfully",
+      record: newAppointment,
     });
   });
 });
