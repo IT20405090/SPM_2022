@@ -19,6 +19,7 @@ import ViewAllFuel from "./components/admin/ViewAllFuel";
 import EditFuel from "./components/admin/EditFuel";
 
 //Disni
+//admin
 import AdminCheckLeave from "./components/admin/AdminCheckLeave";
 import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
 import AdminCreateSalary from "./components/admin/AdminCreateSalary";
