@@ -3,6 +3,12 @@ import React, { Component } from 'react'
 
 //import axios
 import axios from 'axios'
+// import Html from 'react-pdf-html';
+
+//import pdf generator
+import jsPdf from 'jspdf'
+import 'jspdf-autotable'
+
 
 export default class AdminViewAllFuel extends Component {
 
@@ -13,6 +19,25 @@ export default class AdminViewAllFuel extends Component {
         //initializing an array 
         GetAllFuel:[]
         };
+        
+    }
+    
+    //pdf generator function
+    jsPdfGenarator = ()=>{
+      var doc = new jsPdf('p','pt');
+
+      doc.text(210,30,"Monthly Report - Fuel")
+      doc.autoTable({html:'#pdf'})
+
+      doc.autoTable({
+        columnStyles:{europe:{halign:'center'}},
+        margin:{top:10},
+      })
+
+
+    doc.save("Report.pdf");
+
+
     }
 
     //calling the method after componenets render to the page
@@ -48,8 +73,11 @@ export default class AdminViewAllFuel extends Component {
 
 
 //search data according to the shift and date
-
+        
+        
 filterData(GetAllFuel,searchKey){
+
+  
     const result =GetAllFuel.filter((FuelData)=>
    
     FuelData.Fname.includes(searchKey)
@@ -92,19 +120,23 @@ filterData(GetAllFuel,searchKey){
           <input
           className="form-control" style={{marginTop:'100px',padding:'10px 50px', marginRight:'1150px'}}
           type="search"
-          placeholder="Search by Type"
+          placeholder="Search By The Type Of Fuel"
           name="searchQuery"
           onChange={this.handleSearchArea}>
             </input>
-    
-        
-      
+            
+            &nbsp;<button className="btn btn-success" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                              marginLeft:'900px', width:'300px', height:'80px', marginTop:'-100px'}} >
+                              <i class="fa-solid fa-download"></i>&nbsp;Generate Monthly Report
+            </button>
+
+
       </div>
 
       <br/>      
               
-
-      <table className="table table-hover" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
+<div id="content">
+      <table className="table table-hover" id="pdf" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
           <thead>
             <tr style={{fontSize:'20px'}}>
                 <th scope="col">No</th>
@@ -148,12 +180,19 @@ filterData(GetAllFuel,searchKey){
             
                 ))} 
 
+                    
           </tbody>
+                    
+
 
       </table>
 
+     
+      </div>
+     
 </div>
     )
+
   }
 }
 

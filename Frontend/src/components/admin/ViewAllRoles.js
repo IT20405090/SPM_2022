@@ -4,6 +4,9 @@ import { Link , useNavigate } from "react-router-dom";
 import { GetallUsers, DeleteAdmin } from "../../Services/AuthServices";
 import Swal from "sweetalert2";
 
+//import backgroud picture
+import BgAdmin2 from '../../img/BgEmp7.jpeg';
+
 const Viewallusers = () => {
 
     const navigate = useNavigate();
@@ -76,25 +79,33 @@ const Viewallusers = () => {
    
 
 	return (
-		<div style={{ textAlign: "center" }}>
-             <div style={{marginTop:"30px"}}>
-                  
-              
+		
+            
+             <div style={{ marginTop: '0px',   backgroundSize: 'cover'}}>                  
+              <div style={{ textAlign: "center" }}>
             </div>
-            <br/>
+           
             
 			<div>
                
                 <div >
                     <center >
-                        <b style={{fontSize:"48px" , textDecoration:"underline"}}>User Details</b><br/><br/>
+                        {/* <b style={{fontSize:"48px" , textDecoration:"underline"}}>User Details</b><br/><br/> */}
+                                <div style={{height:'80px', backgroundColor:"#90A4AE", marginTop:'-20px'}}>
+                                <br/><br/>
+
+                                <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>User Details</h1>
+                                
+                                <div style={{height:'80px', backgroundColor:"#CFD8DC", marginTop:'-50px'}}></div>
+                                </div>
                     </center>
                   
-                    <br/><br/>
+                    <br/><br/><br/><br/>
+                    
                     <h3>Registered Customers</h3>
                     <table className="table table-striped table-success">
                         <thead>
-                            <tr>
+                            <tr >
                             <th>No</th>
                             <th>FullName</th>
                             <th>Email Address</th>
@@ -157,6 +168,7 @@ const Viewallusers = () => {
                         </tbody>
                     </table>
 			</div>
+      
       <br/><br/><br/><br/><br/><br/><br/>
 		</div>
 	);
