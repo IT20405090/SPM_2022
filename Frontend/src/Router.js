@@ -20,6 +20,7 @@ import Stock from "./components/admin/UpdateStock";
 import AvailableFuel from "./components/admin/AvailableFuel";
 
 //Disni
+//admin
 import AdminCheckLeave from "./components/admin/AdminCheckLeave";
 import AdminLeaveViewAll from "./components/admin/AdminLeaveViewAll";
 import AdminCreateSalary from "./components/admin/AdminCreateSalary";
