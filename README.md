@@ -20,6 +20,6 @@ You can clone the repository to your computer and then give the command
 ```
 npm install
 ```
-
+Run the project
 ```
 npm start
