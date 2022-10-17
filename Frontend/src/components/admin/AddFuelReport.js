@@ -36,6 +36,11 @@ function AddFuelReport(){
     const HandleRefID = (e)=>{
       e.preventDefault();
       setRefID(e.target.value);
+
+      //validation
+      if ((e.target.value).length>7) {
+        alert("Invalid ID type!");
+      }
       
     }
 
@@ -54,7 +59,10 @@ function AddFuelReport(){
     const HandleRamount = (e)=>{
       e.preventDefault();
       setRamount(e.target.value);
-      
+      //validation
+      if ((e.target.value).length>7) {
+        alert("Invalid amount!");
+      }
     }  
 
     
@@ -62,12 +70,18 @@ function AddFuelReport(){
     const HandleMotoBikes = (e)=>{
       e.preventDefault();
       setMotoBikes(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Invalid ID type!");
+      }
       
     }
 
     const HandleCars = (e)=>{
       e.preventDefault();
       setCars(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Invalid ID type!");
+      }
       
     }
 
@@ -75,24 +89,36 @@ function AddFuelReport(){
     const HandleVans = (e)=>{
       e.preventDefault();
       setVans(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Invalid ID type!");
+      }
       
     }
    
     const HandleBuses = (e)=>{
       e.preventDefault();
       setBuses(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Invalid ID type!");
+      }
       
     }  
 
     const HandleThreeWheel = (e)=>{
       e.preventDefault();
       setThreeWheel(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Invalid ID type!");
+      }
       
     }  
 
     const HandleOther = (e)=>{
       e.preventDefault();
       setOther(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Invalid ID type!");
+      }
       
     } 
     const handleTot = (e)=>{
