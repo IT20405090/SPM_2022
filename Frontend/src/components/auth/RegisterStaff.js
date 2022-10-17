@@ -25,6 +25,14 @@ const RegisterStaff = () => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 
 	const onSubmit = async (e) => {
+
+		let validate = ValidateSignUp(formData);
+
+		if(validate.status == false)
+		{
+			alert(validate.message);
+		}
+
 		console.log("Form data", e);
 		e.preventDefault();
 		if (password !== password2) {
