@@ -91,7 +91,7 @@ function ViewOneAttendance() {
 
 
 
-                    <table className='tableEmpAttOne' style={{ width:'35%', height:'40%', marginLeft:'480px',marginTop:'10px',fontSize:'20px',background:"rgba(80,80,80,0.45)"}}>
+                    <table className='tableEmpAttOne' style={{ width:'35%', height:'40%', marginLeft:'480px',marginTop:'10px',fontSize:'20px',background:"rgba(80,80,80,0.65)"}}>
                      
                     <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
                    
