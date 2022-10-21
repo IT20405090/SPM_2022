@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { LoginCustomer } from "../../Services/AuthServices";
 import Swal from 'sweetalert2';
+import reg1 from '../../img/reg.jpg';
 
 const Login = () => {
 
@@ -42,16 +43,21 @@ const Login = () => {
 
 
 	return (
-		<div>
+		<div style={{backgroundImage: `url(${reg1})`}}>
 			<center>
 			<br/><br/>
+			<div style={{marginTop:'20px', marginBottom:'-60px', width:'700px', backgroundColor:'lightgrey'}}>
 			<div style={{height:'80px', backgroundColor:"#FA9c1B", marginTop:'-20px'}}>
+			<br/>
 			<h1 className="heading">Log In</h1>
+			<br/>
 			</div>
 			<br/>
+			<div style={{color:'black'}}>
 			<p className="lead">
 				<i className="fas fa-user"></i> Log Into Your Account
 			</p>
+			</div>
 			<br />
 			<form className="form" onSubmit={(e) => onSubmit(e)}>
 				<div className="form-group">
@@ -80,9 +86,13 @@ const Login = () => {
 			<p className="link">
 				Don't have an account? <Link to="/register">Sign Up</Link>
 			</p>
+			<br/>
+			</div>
 			</center>
+			
 			<br/><br/><br/><br/><br/><br/>
 		</div>
+		
 	);
 };
 

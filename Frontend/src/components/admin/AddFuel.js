@@ -151,7 +151,7 @@ function AddFuel() {
                         &nbsp;&nbsp;&nbsp;&nbsp;
                             <label>Received Amount :</label><br /> &nbsp;&nbsp;&nbsp;&nbsp;
                             <input 
-                            type='text' 
+                            type='number' 
                             value={amount} 
                             placeholder="Please Enter The Amount In Litres"
                             className='form-control' 
@@ -207,9 +207,9 @@ function AddFuel() {
                         <div className='form-group'>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                             <label>Price per Litre : </label><br />&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type='text'
+                            <input type='number'
                             value={price} 
-                            placeholder="Price In Rupees"
+                            placeholder="Price In Rupees - 000.00"
                             className='form-control' 
                             style={{ marginBottom: '10px', marginLeft:'5px' , marginRight:'20px'}}
                             onChange={(e) => Handleprice(e)} 
