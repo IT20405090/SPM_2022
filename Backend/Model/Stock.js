@@ -23,7 +23,7 @@ const FuelSchema = new mongoose.Schema({
         require:true
     },
     mdate:{
-        type:Date,
+        type:String,
         require:true
     }
 })

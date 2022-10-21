@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 //create db schema to store data
 const FuelAddSchema = new mongoose.Schema({
     Date:{
-        type:Date,
+        type:String,
         require:true
     },
      

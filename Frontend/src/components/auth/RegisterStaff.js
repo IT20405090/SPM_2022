@@ -140,6 +140,7 @@ const RegisterStaff = () => {
             <label className="form-label"><h4>Contact Number : </h4></label>
                 <input type="text"
 						class="form-control"
+						maxLength={12}
 						placeholder="Mobile no"
 						name="mobileno"
 						value={mobileno}
