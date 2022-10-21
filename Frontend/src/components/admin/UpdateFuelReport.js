@@ -254,7 +254,7 @@ useEffect(function effectFunction() {
                               <td>
                                 <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Received Amount: </label>
-                                <input type="text"
+                                <input type="number"
                                 name="Ramount"
                                 className="form-control"
                                 value={Ramount} 
@@ -279,7 +279,7 @@ useEffect(function effectFunction() {
                                 <td>
                                  <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Motobikes: </label>
-                                <input type="text"
+                                <input type="number"
                                 name="MotoBikes"
                                 className="form-control"
                                 value={MotoBikes} 
@@ -299,7 +299,7 @@ useEffect(function effectFunction() {
                                 <td>
                                  <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Cars: </label>
-                                <input type="text"
+                                <input type="number"
                                  name="Cars"
                                  className="form-control"
                                  value={Cars} 
@@ -313,7 +313,7 @@ useEffect(function effectFunction() {
                                 <tr><td>
                                  <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  ThreeWheel: </label>
-                                <input type="text"
+                                <input type="number"
                                   name="ThreeWheel"
                                   className="form-control"
                                   value={ThreeWheel} 
@@ -330,7 +330,7 @@ useEffect(function effectFunction() {
                                  <td>
                                  <div className="form-group" style={{marginBottom:'15px',marginLeft:'-250px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Buses: </label>
-                                <input type="text"
+                                <input type="number"
                                   name="Buses"
                                   className="form-control"
                                   value={Buses} 
@@ -346,7 +346,7 @@ useEffect(function effectFunction() {
                                   <td>
                                  <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Vans: </label>
-                                <input type="text"
+                                <input type="number"
                                  name="Vans"
                                  className="form-control"
                                  value={Vans} 
@@ -363,7 +363,7 @@ useEffect(function effectFunction() {
     
                                  <div className="form-group" style={{marginBottom:'15px',marginLeft:'-250px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Lorry/Others: </label>
-                                <input type="text"
+                                <input type="number"
                                 name ="Other"
                                 className="form-control"
                                 value={Other} 
@@ -404,9 +404,9 @@ useEffect(function effectFunction() {
                                  </tr>
   
                                  <tr><td>
-                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
+                                 <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Octane 92: </label>
-                                <input type="text"
+                                <input type="number"
                                  name="Oct92"
                                  className="form-control"
                                  value={Oct92} 
@@ -421,7 +421,7 @@ useEffect(function effectFunction() {
                               <tr><td>
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Octane 95: </label>
-                                <input type="text"
+                                <input type="number"
                                  name="Oct95"
                                  className="form-control"
                                  value={Oct95} 
@@ -436,7 +436,7 @@ useEffect(function effectFunction() {
                               <tr><td>
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                                 <label style={{margineBottom:'5px'}}>  Deisal: </label>
-                                <input type="text"
+                                <input type="number"
                                  name="Diesal"
                                  className="form-control"
                                  value={Diesal} 
@@ -472,7 +472,7 @@ useEffect(function effectFunction() {
                              <br/>
                           
                              <button className="btn btn-primary" style={{marginRight:'0px', blockSize:'50px', width:'250px'}} type="submit" onClick={(e)=>ChangeOnClick(e)}>
-                             UPDARE </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                             UPDATE </button>&nbsp;&nbsp;&nbsp;&nbsp;
   
     
                          

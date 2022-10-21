@@ -260,7 +260,7 @@ function Addtimetable() {
                           <td>
                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Start: </label>
-                            <input type="text"
+                            <input type="time"
                             name="Start"
                             className="form-control"
                             value={Start} 
@@ -278,7 +278,7 @@ function Addtimetable() {
 
                              <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  End : </label>
-                            <input type="text"
+                            <input type="time"
                             name="End"
                             className="form-control"
                             value={End} 
@@ -298,7 +298,7 @@ function Addtimetable() {
                             <td>
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Motobikes: </label>
-                            <input type="text"
+                            <input type="number"
                             name="MotoBikes"
                             className="form-control"
                             value={MotoBikes} 
@@ -318,7 +318,7 @@ function Addtimetable() {
                             <td>
                              <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Cars: </label>
-                            <input type="text"
+                            <input type="number"
                              name="Cars"
                              className="form-control"
                              value={Cars} 
@@ -332,7 +332,7 @@ function Addtimetable() {
                             <tr><td>
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Vans: </label>
-                            <input type="text"
+                            <input type="number"
                               name="Vans"
                               className="form-control"
                               value={Vans} 
@@ -349,7 +349,7 @@ function Addtimetable() {
                              <td>
                              <div className="form-group" style={{marginBottom:'15px',marginLeft:'-250px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Buses: </label>
-                            <input type="text"
+                            <input type="number"
                                name="Buses"
                               className="form-control"
                               value={Buses} 
@@ -365,7 +365,7 @@ function Addtimetable() {
                               <td>
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Three-Wheel: </label>
-                            <input type="text"
+                            <input type="number"
                              name="ThreeWheel"
                              className="form-control"
                              value={ThreeWheel} 
@@ -382,7 +382,7 @@ function Addtimetable() {
 
                              <div className="form-group" style={{marginBottom:'15px',marginLeft:'-250px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Lorry/Others: </label>
-                            <input type="text"
+                            <input type="number"
                             name ="Other"
                             className="form-control"
                             value={Other} 
@@ -427,7 +427,7 @@ function Addtimetable() {
                         <button className= "btn btn-primary" style={{marginRight:'0px', marginLeft:'-100px', blockSize:'70px', width:'200px'}} type="submit" onClick={handleSubmit}>
                          Send Details </button>  
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         <button className="btn btn-warning" style={{blockSize:'70px', width:'200px'}}><a href = "/ViewTimeTable" >VIEW</a></button>
+                         <button className="btn btn-warning" style={{blockSize:'70px', width:'200px'}}><a href ={`/ViewTimeTable`}>View</a></button>
             </center>
             
             </div>

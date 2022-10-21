@@ -198,7 +198,7 @@ useEffect(function effectFunction() {
 
                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Start: </label>
-                            <input type="text"
+                            <input type="time"
                             name="Start"
                             className="form-control"
                             value={Start} 
@@ -211,7 +211,7 @@ useEffect(function effectFunction() {
 
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  End : </label>
-                            <input type="text"
+                            <input type="time"
                             name="End"
                             className="form-control"
                             value={End} 
@@ -226,7 +226,7 @@ useEffect(function effectFunction() {
 
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Motobikes: </label>
-                            <input type="text"
+                            <input type="number"
                             name="MotoBikes"
                             className="form-control"
                             value={MotoBikes} 
@@ -238,7 +238,7 @@ useEffect(function effectFunction() {
 
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Cars: </label>
-                            <input type="text"
+                            <input type="number"
                              name="Cars"
                              className="form-control"
                              value={Cars} 
@@ -250,7 +250,7 @@ useEffect(function effectFunction() {
 
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Vans: </label>
-                            <input type="text"
+                            <input type="number"
                               name="Vans"
                               className="form-control"
                               value={Vans} 
@@ -264,7 +264,7 @@ useEffect(function effectFunction() {
                              
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Buses: </label>
-                            <input type="text"
+                            <input type="number"
                                name="Buses"
                               className="form-control"
                               value={Buses} 
@@ -276,7 +276,7 @@ useEffect(function effectFunction() {
 
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Three-Wheel: </label>
-                            <input type="text"
+                            <input type="number"
                              name="ThreeWheel"
                              className="form-control"
                              value={ThreeWheel} 
@@ -289,7 +289,7 @@ useEffect(function effectFunction() {
 
                              <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Lorry/Others: </label>
-                            <input type="text"
+                            <input type="number"
                             name ="Other"
                             className="form-control"
                             value={Other} 
@@ -303,7 +303,7 @@ useEffect(function effectFunction() {
           
                            
                         <button className="btn btn-primary" type="submit" onClick={(e)=>ChangeOnClick(e)}>
-                        UPDARE </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        UPDATE </button>&nbsp;&nbsp;&nbsp;&nbsp;
 
                         <button className="btn btn-warning"><a href = "/ViewTimeTable" >VIEW</a></button>
                         &nbsp;
