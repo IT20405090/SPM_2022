@@ -30,7 +30,7 @@ export default class UserList extends Component {
       });
   }
 
-  /*//pdf generating
+  //pdf generating
   jsPdfGenerator = () => {
     //new document in jspdf
     var doc = new jsPdf("p", "pt");
@@ -46,7 +46,7 @@ export default class UserList extends Component {
     //save the pdf
     doc.save("Details of Appointments.pdf");
   };
-*/
+
   filterData(appointments,searchKey){
     const result = appointments.filter((appointments) =>
     appointments.vehicleNumber.toLowerCase().includes(searchKey)
@@ -79,7 +79,15 @@ export default class UserList extends Component {
           <div className="row">
             <div className="col-lg-9 mt-2 mb-2">
              <center> <h1 style={{color:'white'}}> Details of all Appointments </h1> <br /> </center>
-             
+              <button
+                type="button"
+                title="Report generation"
+                class="btn btn-outline-primary btn-sm"
+                onClick={this.jsPdfGenerator}
+              >
+                {" "}
+                <h4>Download as a PDF</h4>
+              </button>
             </div>
 
             <div className="col-lg-3 mt-2 mb-2">

@@ -49,7 +49,7 @@ import SubmitAppointment from "./components/customer/SubmitAppointment";
 import UpdateAppointment from "./components/customer/UpdateAppointment";
 import ViewSubmittedAppointment from "./components/customer/ViewSubmittedAppointment";
 import FuelSummarry from "./components/customer/FuelSummarry";
-
+import AdminFuelSummarry from "./components/customer/AdminFuelSummarry";
 //employee
 import RegisterStaff from "./components/auth/RegisterStaff";
 
@@ -160,6 +160,8 @@ export default function Router() {
           />
 
           <Route path="/FuelSummarry" element={<FuelSummarry />} />
+
+          <Route path="/AdminFuelSummarry" element={<AdminFuelSummarry />} />
         </Routes>
         <Footer />
       </Router>

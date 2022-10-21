@@ -97,6 +97,18 @@ const Navbar = () => {
                 >
                   Add Fuel Stock
                 </a>
+
+                <a
+                  style={{
+                    display: userRole == "Admin" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href=" /AdminFuelSummarry"
+                  aria-current="page"
+                >
+                  Customer Appoinments
+                </a>
                 <a
                   style={{
                     display: userRole == "Admin" ? "flex" : "none",

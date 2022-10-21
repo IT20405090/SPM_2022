@@ -100,7 +100,7 @@ function ViewSubmitAppointment() {
   return (
     
 
-    <div style={{ backgroundImage: `url(${viewappointment})`, backgroundSize: '100%', padding:'10px 20% 10px 20%'}}>
+    <div style={{ backgroundImage: `url(${viewappointment})`, backgroundSize: 'cover', padding:'10px 20% 10px 20%'}}>
       <center>
 
       <div
@@ -187,17 +187,14 @@ function ViewSubmitAppointment() {
                 </button>
                 <br></br>
                 <br></br>
-                <Link to={"/FuelSummarry/"}>
-                  <button type="button" class="btn btn-success">
-                    Fuel Summary
-                  </button>
-                </Link>
+                
                 <br />
                 <br></br>
 
 </center>
                 
               </form>
+              <br/><br/><br/>
             </div>
           </td>
         </tr>

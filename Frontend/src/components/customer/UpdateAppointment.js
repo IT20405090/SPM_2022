@@ -150,7 +150,11 @@ function UpdateAppointment() {
               <td>
                 <div>
                   <form
-                    style={{ backgroundColor: "#ebecf0" }}
+                    style={{
+                      backgroundColor: "#ebecf0",
+                      marginTop: "20px",
+                      width: "700px",
+                    }}
                     onSubmit={(e) => submitButton(e)}
                   >
                     <div className="form-group">
@@ -194,6 +198,7 @@ function UpdateAppointment() {
                         <option value="Bus">Bus</option>
                         <option value="Bike">Bike</option>
                         <option value="Three Wheel">Three Wheel</option>
+                        <option value="Other">Other</option>
                       </datalist>
                     </div>
                     <br />
@@ -227,8 +232,10 @@ function UpdateAppointment() {
                         required
                       />
                       <datalist id="typef">
-                        <option value="Petrol">Petrol</option>
-                        <option value="Diesel">Diesel</option>
+                        <option value="92 Octane Petrol">92 Octane </option>
+                        <option value="95 Octane Petrol">95 Octane </option>
+                        <option value="Auto Diesel">Auto Diesel</option>
+                        <option value="Super Diesel">Super Diesel</option>
                       </datalist>
                     </div>
                     <br />
@@ -266,6 +273,7 @@ function UpdateAppointment() {
           </table>
         </center>
       </div>
+      <br />
     </div>
   );
 }
