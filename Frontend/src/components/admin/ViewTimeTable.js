@@ -31,10 +31,10 @@ export default class ViewTimeTable extends Component{
     onDelete = (id) =>{
     
       axios.delete(`http://localhost:5000/TimeTables/delete/${id}`).then((res)=>{
-          alert("Delete successfully");
           this.retrieveTimetables();
             
       })
+      alert("Delete successfully");
     }
 
     filterData(timetable,searchKey){

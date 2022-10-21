@@ -63,6 +63,7 @@ function AddFuelReport(){
       if ((e.target.value).length>7) {
         alert("Invalid amount!");
       }
+    
     }  
 
     
@@ -71,7 +72,7 @@ function AddFuelReport(){
       e.preventDefault();
       setMotoBikes(e.target.value);
       if ((e.target.value).length>7) {
-        alert("Invalid ID type!");
+        alert("Limit exceeded!");
       }
       
     }
@@ -80,7 +81,7 @@ function AddFuelReport(){
       e.preventDefault();
       setCars(e.target.value);
       if ((e.target.value).length>7) {
-        alert("Invalid ID type!");
+        alert("Limit exceeded!");
       }
       
     }
@@ -90,7 +91,7 @@ function AddFuelReport(){
       e.preventDefault();
       setVans(e.target.value);
       if ((e.target.value).length>7) {
-        alert("Invalid ID type!");
+        alert("Limit exceeded!");
       }
       
     }
@@ -99,7 +100,7 @@ function AddFuelReport(){
       e.preventDefault();
       setBuses(e.target.value);
       if ((e.target.value).length>7) {
-        alert("Invalid ID type!");
+        alert("Limit exceeded!");
       }
       
     }  
@@ -108,7 +109,7 @@ function AddFuelReport(){
       e.preventDefault();
       setThreeWheel(e.target.value);
       if ((e.target.value).length>7) {
-        alert("Invalid ID type!");
+        alert("Limit exceeded!");
       }
       
     }  
@@ -117,7 +118,7 @@ function AddFuelReport(){
       e.preventDefault();
       setOther(e.target.value);
       if ((e.target.value).length>7) {
-        alert("Invalid ID type!");
+        alert("Limit exceeded!");
       }
       
     } 
@@ -135,12 +136,17 @@ function AddFuelReport(){
     const HandleOct92 = (e)=>{
       e.preventDefault();
       setOct92(e.target.value);
-      
+      if ((e.target.value).length>7) {
+        alert("Limit exceeded!");
+      }
     }
 
     const HandleOct95 = (e)=>{
       e.preventDefault();
       setOct95(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Limit exceeded!");
+      }
       
     }
 
@@ -148,6 +154,9 @@ function AddFuelReport(){
     const HandleDiesal = (e)=>{
       e.preventDefault();
       setDiesal(e.target.value);
+      if ((e.target.value).length>7) {
+        alert("Limit exceeded!");
+      }
       
     }
 
@@ -333,8 +342,8 @@ function AddFuelReport(){
                              <tr>
                             <td>
                               <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
-                              <label style={{margineBottom:'5px'}}>  Received Amount: </label>
-                              <input type="text"
+                              <label style={{margineBottom:'5px'}}>  Received Amount(L): </label>
+                              <input type="number"
                               name="Ramount"
                               className="form-control"
                               value={Ramount} 
@@ -359,7 +368,7 @@ function AddFuelReport(){
                               <td>
                                <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Motobikes: </label>
-                              <input type="text"
+                              <input type="number"
                               name="MotoBikes"
                               className="form-control"
                               value={MotoBikes} 
@@ -379,7 +388,7 @@ function AddFuelReport(){
                               <td>
                                <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Cars: </label>
-                              <input type="text"
+                              <input type="number"
                                name="Cars"
                                className="form-control"
                                value={Cars} 
@@ -393,7 +402,7 @@ function AddFuelReport(){
                               <tr><td>
                                <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  ThreeWheel: </label>
-                              <input type="text"
+                              <input type="number"
                                 name="ThreeWheel"
                                 className="form-control"
                                 value={ThreeWheel} 
@@ -410,7 +419,7 @@ function AddFuelReport(){
                                <td>
                                <div className="form-group" style={{marginBottom:'15px',marginLeft:'-250px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Buses: </label>
-                              <input type="text"
+                              <input type="number"
                                 name="Buses"
                                 className="form-control"
                                 value={Buses} 
@@ -426,7 +435,7 @@ function AddFuelReport(){
                                 <td>
                                <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Vans: </label>
-                              <input type="text"
+                              <input type="number"
                                name="Vans"
                                className="form-control"
                                value={Vans} 
@@ -443,7 +452,7 @@ function AddFuelReport(){
   
                                <div className="form-group" style={{marginBottom:'15px',marginLeft:'-250px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Lorry/Others: </label>
-                              <input type="text"
+                              <input type="number"
                               name ="Other"
                               className="form-control"
                               value={Other} 
@@ -489,7 +498,7 @@ function AddFuelReport(){
                                <tr><td>
                            <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Octane 92: </label>
-                              <input type="text"
+                              <input type="number"
                                name="Oct92"
                                className="form-control"
                                value={Oct92} 
@@ -504,7 +513,7 @@ function AddFuelReport(){
                             <tr><td>
                            <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Octane 95: </label>
-                              <input type="text"
+                              <input type="number"
                                name="Oct95"
                                className="form-control"
                                value={Oct95} 
@@ -519,7 +528,7 @@ function AddFuelReport(){
                             <tr><td>
                            <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                               <label style={{margineBottom:'5px'}}>  Deisal: </label>
-                              <input type="text"
+                              <input type="number"
                                name="Diesal"
                                className="form-control"
                                value={Diesal} 
