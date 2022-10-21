@@ -212,6 +212,7 @@ function LeaveFormCreate() {
                     </div>
                     </td>
                     </tr>
+                    
                     <tr>
                     <td colspan="2">
                     <div className='form-group'>
@@ -278,7 +279,7 @@ function LeaveFormCreate() {
                     <tr>
                     <td colspan="2">
                     <div>
-                      <p>-------------------------------------------------------------------------------------------</p>
+                      <p>------------------------------------------------------------------------------------------</p>
                       <p style={{marginLeft:'750px'}}>*Manager Only</p>
                     </div>
                     </td>

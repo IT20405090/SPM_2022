@@ -84,11 +84,11 @@ function SubmitAppointment() {
           <td>
             <div>
               <form
-                style={{ backgroundColor: "#ebecf0" , marginTop: "20px"}}
+                style={{ backgroundColor: "#ebecf0" , marginTop: "20px", width:"500px"}}
                 onSubmit={(e) => submitButton(e)}
               >
-                <div className="form-group">
-                 
+                <div className="Sandeepa">
+                 <br/>
                   <label className="form-label">
                     <h4>&nbsp; Vehicle Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h4>
                   </label>
@@ -126,7 +126,7 @@ function SubmitAppointment() {
                     <option value="Lorry">Lorry</option>
                     <option value="Bus">Bus</option>
                     <option value="Bike">Bike</option>
-                    <option value="Three Wheel">Three Wheel</option>
+                    <option value="ThreeWheel">ThreeWheel</option>
                   </datalist>
                 </div>
                 <br />
