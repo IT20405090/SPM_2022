@@ -136,7 +136,12 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
 
 
             <br/>
-             <table className='tableSalary' style={{width:"1400px", marginLeft:"150px", marginTop:'50px', background:"rgba(100,80,120,0.45)"}} >
+            <button className="btn btn-success" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px', marginLeft:'150px'}}>
+                      <a href="/AvailableFuel"
+                      style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
+                      <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
+                      </button>
+             <table className='tableSalary' style={{width:"1400px", marginLeft:"150px", marginTop:'10px', background:"rgba(100,80,120,0.45)"}} >
             
              
                <tr style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black', marginLeft:'50px'}}>
@@ -235,11 +240,7 @@ await axios.put(`http://localhost:5000/UpdateStock/${id?.id}`,stockUpdate)
                       &nbsp; <h4>UPDATE</h4>
                       </button>
 
-                      <button className="btn btn-success" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px'}}>
-                      <a href="/AvailableFuel"
-                      style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
-                      <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a>
-                      </button>
+                     
                       </center>
                   </tr>
                   <br/><br/><br/><br/><br/>

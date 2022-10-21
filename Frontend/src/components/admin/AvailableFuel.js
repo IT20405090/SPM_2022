@@ -52,12 +52,12 @@ export default class AdminViewAllStock extends Component {
       <div>
 
 
-      <div style={{height:'80px', backgroundColor:"#90A4AE", marginTop:'-20px'}}>
+      <div style={{height:'80px', backgroundColor:"#C5CAE9", marginTop:'-20px'}}>
         <br/><br/>
 
         <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>Fuel Information</h1>
         
-        <div style={{height:'80px', backgroundColor:"#CFD8DC", marginTop:'-50px'}}></div>
+        <div style={{height:'80px', backgroundColor:"#7986CB", marginTop:'-50px'}}></div>
         </div>
         <div style={{ marginTop: '54px',  backgroundImage: `url(${BgAdmin2})`,   backgroundSize: 'cover'}}>  
         <br/>
@@ -137,21 +137,21 @@ export default class AdminViewAllStock extends Component {
 
       <table style={{marginTop:'50px',  marginLeft:'200px', width:'1300px',color:'white'}}>
           <thead>
-            <tr style={{fontSize:'20px'}}>
+            <tr style={{fontSize:'20px', pattern:"(?:19|20)\[0-9\]{2}-(?:(?:0\[1-9\]|1\[0-2\])-(?:0\[1-9\]|1\[0-9\]|2\[0-9\])|(?:(?!02)(?:0\[1-9\]|1\[0-2\])-(?:30))|(?:(?:0\[13578\]|1\[02\])-31))"}}>
                 <th scope="col"><h3>Modified Date</h3></th>
                 
                 
             </tr>
           </thead>
           
-          <tbody>
+          <tbody >
 
             {this.state.GetAllStock.map((GetAllStock,index)=>(
             <tr key ={index}>
               {/* <th scope='row'>{index+1}</th> */}
               
             
-              <td><h4>{GetAllStock.mdate}</h4></td> 
+              <td style={{fontSize:'20px', pattern:"(?:19|20)\[0-9\]{2}-(?:(?:0\[1-9\]|1\[0-2\])-(?:0\[1-9\]|1\[0-9\]|2\[0-9\])|(?:(?!02)(?:0\[1-9\]|1\[0-2\])-(?:30))|(?:(?:0\[13578\]|1\[02\])-31))"}}><h4>{GetAllStock.mdate}</h4></td> 
 
                         <a className ="btn btn-warning" href={`/stock/${GetAllStock._id}`}>
                             <i className="fas fa-edit"></i>&nbsp;<h4>Update Stock</h4>

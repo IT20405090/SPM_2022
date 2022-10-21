@@ -136,7 +136,7 @@ filterData(GetAllFuel,searchKey){
       <br/>      
               
 <div id="content">
-      <table className="table table-hover" id="pdf" style={{marginTop:'50px',  marginLeft:'170px', width:'1300px'}}>
+      <table className="table table-hover" id="pdf" style={{marginTop:'50px',  marginLeft:'120px', width:'1500px'}}>
           <thead>
             <tr style={{fontSize:'20px'}}>
                 <th scope="col">No</th>
