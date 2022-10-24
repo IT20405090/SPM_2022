@@ -225,7 +225,7 @@ jsPdfGenarator = ()=>{
                           
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Basic Salary:</label>
+                                   <label style={{fontWeight:'700'}}>Basic Salary (Rs.):</label>
                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     {Basic_Salary} 
@@ -234,7 +234,7 @@ jsPdfGenarator = ()=>{
 
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Convenyance Allowance:</label>
+                                   <label style={{fontWeight:'700'}}>Conveyance Allowance (Rs.):</label>
                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     {Conv_Allowance} 
                                 </td>
@@ -242,7 +242,7 @@ jsPdfGenarator = ()=>{
                            
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Performance Allowance:</label>
+                                   <label style={{fontWeight:'700'}}>Performance Allowance (Rs.):</label>
                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     {Performance_Allowance} 
                                 </td>                               
@@ -250,7 +250,7 @@ jsPdfGenarator = ()=>{
                             <br/>
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Total Earning:</label>
+                                   <label style={{fontWeight:'700'}}>Total Earning (Rs.):</label>
                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                     {Total_Earning} 

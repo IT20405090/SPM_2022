@@ -307,7 +307,7 @@ await axios.put(`http://localhost:5000/UpdateSalarySheet/${id?.id}`,EmpSalUpdate
                </div>
                </td>
            
-               <td colSpan={'2'}>
+               <td>
                <div className='form-group'>
                    <label>Total Days For Month: </label><br />
                    <input type='number'
@@ -324,7 +324,7 @@ await axios.put(`http://localhost:5000/UpdateSalarySheet/${id?.id}`,EmpSalUpdate
                <td>
                <div className='form-group'>
                
-                   <label>Basic Salary: </label><br />
+                   <label>Basic Salary (Rs.): </label><br />
                
                    <input type='number'
                     value={Basic_Salary} 
@@ -339,7 +339,7 @@ await axios.put(`http://localhost:5000/UpdateSalarySheet/${id?.id}`,EmpSalUpdate
                
                <div className='form-group'>
              
-                   <label>Convenyance Allowance: </label><br />
+                   <label>Conveyance Allowance (Rs.): </label><br />
                   
                    <input type='number'
                     value={Conv_Allowance} 
@@ -353,7 +353,7 @@ await axios.put(`http://localhost:5000/UpdateSalarySheet/${id?.id}`,EmpSalUpdate
                <td>
                <div className='form-group'>
             
-                   <label>Performance Allowance: </label><br />
+                   <label>Performance Allowance (Rs.): </label><br />
                   
                    <input 
                     value={num3} 
@@ -370,7 +370,7 @@ await axios.put(`http://localhost:5000/UpdateSalarySheet/${id?.id}`,EmpSalUpdate
               <tr style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>
                <div className='form-group'>
               
-                   <label>Total Earning: </label><br />
+                   <label>Total Earning (Rs.): </label><br />
                    
                    <input
                     value={tot} 

@@ -199,7 +199,7 @@ useEffect(function effectFunction() {
                           <table>
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Basic Salary:</label>
+                                   <label style={{fontWeight:'700'}}>Basic Salary (Rs.):</label>
                                 </td>
                                 <td>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -209,7 +209,7 @@ useEffect(function effectFunction() {
 
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Convenyance Allowance:</label>
+                                   <label style={{fontWeight:'700'}}>Conveyance Allowance (Rs.):</label>
                                 </td>
                                 <td>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -219,7 +219,7 @@ useEffect(function effectFunction() {
                            
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Performance Allowance:</label>
+                                   <label style={{fontWeight:'700'}}>Performance Allowance (Rs.):</label>
                                 </td>
                                 <td>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -229,7 +229,7 @@ useEffect(function effectFunction() {
                            <br/>
                             <tr>
                                 <td>
-                                   <label style={{fontWeight:'700'}}>Total Earning:</label>
+                                   <label style={{fontWeight:'700'}}>Total Earning (Rs.):</label>
                                 </td>
                                 <td>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

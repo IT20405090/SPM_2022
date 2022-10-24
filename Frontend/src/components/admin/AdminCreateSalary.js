@@ -408,7 +408,7 @@ const handleSubmit = async(e)=>{
     <tr style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>
         <td>
         <div className='form-group'>
-            <label>Basic Salary: </label><br />
+            <label>Basic Salary (Rs.): </label><br />
             <input type='number'
             value={Basic_Salary} 
             className='form-control' 
@@ -419,7 +419,7 @@ const handleSubmit = async(e)=>{
         </td>
         <td>
         <div className='form-group'>
-            <label>Convenyance Allowance: </label><br />
+            <label>Conveyance Allowance (Rs.): </label><br />
             <input type='number'
             value={Conv_Allowance} 
             className='form-control' 
@@ -430,7 +430,7 @@ const handleSubmit = async(e)=>{
         </td>
         <td>
         <div className='form-group'>
-            <label>Performance Allowance: </label><br />
+            <label>Performance Allowance (Rs.): </label><br />
             <input 
             value={num3} 
             placeholder={num3}
@@ -445,7 +445,7 @@ const handleSubmit = async(e)=>{
       <tr style={{fontSize:'18px', color:"white",textShadow: '1px 2px 5px black'}}>
         <td>
         <div className='form-group'>
-            <label>Total Earning: </label><br />
+            <label>Total Earning (Rs.): </label><br />
             <input
             value={tot} 
             placeholder={tot}
