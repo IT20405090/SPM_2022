@@ -6,6 +6,9 @@ import {useState, useEffect } from 'react'
 import axios from 'axios'
 //import useParams
 import {useParams} from 'react-router-dom';
+//import pdf generator
+import jsPdf from 'jspdf'
+import 'jspdf-autotable'
 
 
 //import backgroud picture
@@ -64,6 +67,25 @@ function ViewOneAttendance() {
   
   },[]);
 
+  
+//pdf generator function
+jsPdfGenarator = ()=>{
+  var doc = new jsPdf('p','pt');
+
+  doc.text(210,30,"Your Attendace Sheet")
+  doc.autoTable({html:'#my-pdf'})
+
+  doc.autoTable({
+    columnStyles:{europe:{halign:'center'}},
+    margin:{top:10},
+  })
+
+
+doc.save("Daily_Attendance.pdf");
+
+
+}
+
 
   return (
     <div>
@@ -80,7 +102,7 @@ function ViewOneAttendance() {
                     <div style={{backgroundImage: `url(${BgEmp7})`,   backgroundSize: 'cover'}}>
 
                     
-                      <p style={{ width:'50%', height:'50%', marginLeft:'515px',marginTop:'70px', fontWeight:'1000',color:"white",textShadow: '1px 2px 5px black', fontSize:'50px'}}>Check The Details</p>
+                      <p style={{ width:'50%', height:'50%', marginLeft:'545px',marginTop:'70px', fontWeight:'1000',color:"white",textShadow: '1px 2px 5px black', fontSize:'50px'}}>Check The Details</p>
 
                       
                       <button className="btn btn-success" style={{marginLeft:'50px', marginTop:'1px',padding:'10px 10px',backgroundColor:'#3895d3'}}>
@@ -91,7 +113,7 @@ function ViewOneAttendance() {
 
 
 
-                    <table className='tableEmpAttOne' style={{ width:'35%', height:'40%', marginLeft:'480px',marginTop:'10px',fontSize:'20px',background:"rgba(80,80,80,0.65)"}}>
+                    <table className='tableEmpAttOne' style={{ width:'35%', height:'40%', marginLeft:'480px',marginTop:'10px',fontSize:'20px',background:"rgba(80,80,80,0.65)"}} id="my-pdf">
                      
                     <tr style={{color:"white",textShadow: '1px 2px 5px black'}}>
                    
@@ -143,9 +165,13 @@ function ViewOneAttendance() {
                        
                     </table>
                     <br/>
-                    
-                            
-                            <br/>     
+                
+                    <button className="btn btn-success" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                    marginLeft:'648px', width:'220px'}} >
+                    <i class="fa-sharp fa-solid fa-file-arrow-down"></i> Download 
+                    </button>
+
+                    <br/>   <br/>   
                     </div>
                     
                     
