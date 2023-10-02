@@ -112,106 +112,88 @@ jsPdfGenarator = ()=>{
 
 <div className='FORM2'style={{ marginTop: '40px', backgroundImage: `url(${BgEmp9})`,   backgroundSize: 'cover', padding:'10px 20% 10px 20%' }}>
 <br/><br/>
-                  <form >
+                 
 
                            
 
-                        <table className='tableSalarySheet' style={{border:"1px solid black"}} id="my-pdf" >
+                        <table className='tableSalarySheet' style={{border:"1px solid black", width:'500px'}} id="my-pdf" >
                           
 
                           <tr>
                             <td>
-                                <div className='form-group'>
                                 <label style={{fontWeight:'700'}} >Available Date (From):</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td>
                                  {DateForSalary}   
-                                </div>
                             </td>
                           </tr>
 
                           <br/>
 
                           <tr>
-                          <td>
-                            <div className='form-group'>
-                            <label style={{fontWeight:'700'}}>Employee Name: </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            {Emp_Name}                                
-                            </div>
-                          </td>
-                          <td>
-                            <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Employee ID: </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {Emp_ID} 
-                                
-                            </div>
-                          </td>
-                          </tr>
-                          <br/>
-                          <tr>
-                          <td >
-                            <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Employee Positon: </label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {Emp_Position} 
-                                
-                            </div>
-                          </td>
-                          <td>
-                            <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Bank Account: </label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;
-                                {Bank_Account}                                
-                            </div>
-                          </td>
-                          </tr>
-                          <br/>
-                          
-                          <tr>
-                          <td>
-                            <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Bank Branch:</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {Bank_Branch} 
-                                
-                            </div>
-                          </td>
-                          <td>
-                            <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Bank Name:</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                {Bank_Name} 
-                              
-                            </div>
-                          </td>
+                            <td>
+                              <label style={{fontWeight:'700'}}>Employee Name: </label>
+                            </td>
+                            <td> 
+                              {Emp_Name}                                 
+                            </td>
+                            <td id="my-pdf">
+                               <label style={{fontWeight:'700'}}>Employee ID: </label>
+                            </td>
+                            <td>
+                               {Emp_ID} 
+                             </td>
                           </tr>
 
                           <br/>
+
                           <tr>
-                          <td>
-                            <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Working Days For Month:</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                
-                                {Working_Days_For_Month} 
-                                
-                            </div>
-                          </td>
-                          <td>
-                            <div className='form-group'>
-                                <label style={{fontWeight:'700'}}>Total Days For Month:</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                {Total_Days_For_Month} 
-                              
-                            </div>
-                          </td>
+                            <td >
+                               <label style={{fontWeight:'700'}}>Employee Positon: </label>
+                            </td>  
+                            <td>  
+                                {Emp_Position} 
+                            </td>
+                            <td>
+                                <label style={{fontWeight:'700'}}>Bank Account: </label>
+                            </td> 
+                            <td>   
+                                {Bank_Account}                                
+                            </td>
+                          </tr>
+
+                          <br/>
+                          
+                          <tr>
+                            <td>
+                              <label style={{fontWeight:'700'}}>Bank Branch:</label>
+                            </td>
+                            <td>
+                               {Bank_Branch} 
+                            </td>
+                            <td>
+                               <label style={{fontWeight:'700'}}>Bank Name:</label>
+                              </td>
+                              <td>
+                                {Bank_Name} 
+                              </td>
+                          </tr>
+
+                          <br/>
+
+                          <tr>
+                            <td>
+                              <label style={{fontWeight:'700'}}>Working Days For Month:</label> 
+                            </td>   
+                            <td>
+                            {Working_Days_For_Month} 
+                            </td>
+                            <td>
+                              <label style={{fontWeight:'700'}}>Total Days For Month:</label>
+                            </td>  
+                            <td>
+                              {Total_Days_For_Month} 
+                            </td>
                           </tr>
 
 
@@ -219,50 +201,55 @@ jsPdfGenarator = ()=>{
                           <td colspan="4">
                             <div style={{width:"900px"}}>
                               <hr/>
-                              </div>      
+                              
+                            </div>      
                           </td>
                           </tr>
                           
-                            <tr>
-                                <td>
-                                   <label style={{fontWeight:'700'}}>Basic Salary (Rs.):</label>
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    {Basic_Salary} 
-                                </td>                                
-                            </tr>
+                          <tr>
+                              <td>
+                                  <label style={{fontWeight:'700'}}>Basic Salary (Rs.):</label>
+                              </td>
+                              <td>
+                                  {Basic_Salary} 
+                              </td>                                
+                          </tr>
 
-                            <tr>
-                                <td>
-                                   <label style={{fontWeight:'700'}}>Conveyance Allowance (Rs.):</label>
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    {Conv_Allowance} 
-                                </td>
-                            </tr>
+                          <tr>
+                              <td>
+                                  <label style={{fontWeight:'700'}}>Conveyance Allowance (Rs.):</label>
+                              </td>
+                              <td>
+                                  {Conv_Allowance} 
+                              </td>
+                          </tr>
                            
-                            <tr>
-                                <td>
-                                   <label style={{fontWeight:'700'}}>Performance Allowance (Rs.):</label>
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    {Performance_Allowance} 
-                                </td>                               
-                            </tr>
+                          <tr>
+                              <td>
+                                  <label style={{fontWeight:'700'}}>Performance Allowance (Rs.):</label>
+                              </td>
+                              <td>
+                                  {Performance_Allowance} 
+                              </td>                               
+                          </tr>
+
                             <br/>
-                            <tr>
-                                <td>
-                                   <label style={{fontWeight:'700'}}>Total Earning (Rs.):</label>
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                                    {Total_Earning} 
-                                </td>            
-                            </tr>
+
+                          <tr>
+                              <td>
+                                  <label style={{fontWeight:'700'}}>Total Earning (Rs.):</label>
+                              </td>
+                              <td>
+                                  {Total_Earning} 
+                              </td>            
+                          </tr>
 
                           </table>
                           
                           <br/><br/>
                       
              
-                  </form>
+                 
                   <br/>
 
                   <table>
